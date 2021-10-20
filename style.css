@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +7,13 @@
     -o-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Itim', cursive;
-    /* border-top: 3px solid #b4f9fc; */
 }
 
 ul.links {
     list-style-type: none;
     overflow: hidden;
     background-color: rgb(250, 211, 241);
+    background-color: #e495e4;
     padding: 10px 10px;
 }
 
