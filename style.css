@@ -12,6 +12,7 @@
 ul.links {
     list-style-type: none;
     overflow: hidden;
+    background-color: rgb(250, 211, 241);
     background-color: #e495e4;
     padding: 10px 10px;
 }
@@ -21,12 +22,12 @@ ul.links li {
 }
 
 ul.links li a {
-    margin-right: 15px;
-    border: 1px solid white;
-    background-color: beige;
+    /* margin-right: 15px; */
+    border: 2px solid #fffcd1;
+    background-color: #fffcd1;
     border-radius: 20px;
     display: inline-block;
-    color: #000;
+    color: rgb(162, 104, 238);
     text-align: center;
     padding: 20px 16px;
     text-decoration: none;
@@ -36,7 +37,9 @@ ul.links li a {
 }
 
 ul.links li a:hover {
-    background-color: #f64747;
+    background-color: rgb(226, 82, 195);
+    color: #fffcd1;
+    border: 2px solid rgb(226, 82, 195);
 }
 
 ul.links li.icon {
@@ -122,5 +125,6 @@ ul.links li.icon {
         display: block;
         text-align: center;
         padding: 10px;
+        height: 4rem;
     }
 }

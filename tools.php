@@ -1,6 +1,5 @@
 <?php
 include "connect.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,5 +26,4 @@ include "connect.php";
     </nav>
 </body>
 <script src="./grid.js"></script>
-
 </html>
