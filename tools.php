@@ -15,11 +15,11 @@ include "connect.php";
     <nav>
         <ul class="links" id="myLinks">
             <li><strong><a href="#">GYP DESSERT</a></li></strong>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Beverage</a></li>
-            <li><a href="#">Bakery</a></li>
-            <li class="right"><a href="#">Register</a></li>
-            <li class="right"><a href="#">Login</a></li>
+            <li><a href="#">หน้าหลัก</a></li>
+            <li><a href="#">เมนูเครื่องดื่ม</a></li>
+            <li><a href="#">เมนูขนม</a></li>
+            <li class="right"><a href="#">สมัครสมาชิก</a></li>
+            <li class="right"><a href="#">ล้อกอิน</a></li>
             <li class="icon">
                 <a href="#" onclick="myFunction()">&#9776;</a>
             </li>
