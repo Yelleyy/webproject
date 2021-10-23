@@ -1,5 +1,5 @@
-function myFunction() {
-    var x = document.getElementById("myLinks");
+function nav() {
+    var x = document.getElementById("nav");
     if (x.className === "links") {
         x.className += " responsive";
     } else {
