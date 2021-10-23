@@ -30,7 +30,7 @@ include "connect.php";
             <li><a href="coffee.php">กาแฟ</a></li>
             <li><a href="bakery.php">ขนม</a></li>
             <li><a href="tea.php">ชา</a></li>
-            <li><a href="icecream">ไอศกรีม</a></li>
+            <li><a href="icecream.php">ไอศกรีม</a></li>
             <li class="right"><a href="register.php">สมัครสมาชิก</a></li>
             <li class="right"><a href="login.php">ล้อกอิน</a></li>
             <li class="icon">
