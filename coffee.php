@@ -21,7 +21,8 @@ $stmt->execute();
     <ul class="auto-grid">
     
     <?php while ($row = $stmt->fetch()) : ?>
-        <li class="grid"><img src="img/<?=$row[4];?>" width="100%"><?= $row[1]; ?></li>
+       <li class="grid"><img src="img/<?=$row[4];?>" width="100%"><?= $row[1]; ?>
+       <p>ราคา <?=$row[3];?> บาท</p><a href="#"><p>ซื้อ</p></li></a>
     <?php endwhile; ?>
     </ul>
 </body>

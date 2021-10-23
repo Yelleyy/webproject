@@ -9,7 +9,6 @@ body.grid {
     align-items: center;
     background: #efefef;
     padding: 1rem;
-    /* line-height: 1.4; */
     font-family: sans-serif;
 }
 
@@ -24,8 +23,16 @@ li.grid {
     color: #ffffff;
 }
 
+li.grid a:link,
+li.grid a:visited {
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
 li.grid:hover {
     padding: 2rem 1rem 1rem 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
