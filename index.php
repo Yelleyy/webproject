@@ -39,12 +39,15 @@ $stmt->execute();
 </style>
 
 <body>
-    <h1>หมวดหมู่สินค้า</h1>
+    <h1>รายการอาหาร</h1>
     <div class="vertical-menu" id="cat" >
 
         <?php while ($row = $stmt->fetch()) : ?>
             <a class="b" href="#!" onclick="click()"><?= $row[1]; ?></a>
         <?php endwhile; ?>
+    </div>
+    <div>
+        
     </div>
 </body>
 
