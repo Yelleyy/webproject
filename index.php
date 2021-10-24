@@ -65,7 +65,7 @@ $stmt->execute();
         padding: 5rem 2rem;
         text-align: center;
         font-size: 1.2rem;
-        background: #e9accf;
+        background: rgb(226, 82, 195);
         color: #ffffff;
     }
 
