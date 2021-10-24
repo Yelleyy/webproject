@@ -41,8 +41,8 @@ $stmt->execute();
         padding: 20px;
         /* border: 2px solid rgb(162, 104, 238);
         border-radius: 10px; */
-        color: #ff1659;
-        text-shadow: 2px 4px  #d74894;
+        color: rgb(226, 82, 195);
+        text-shadow: 2px 4px #fffcd1;
     }
 
     .auto-grid {
