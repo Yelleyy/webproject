@@ -28,11 +28,35 @@ date_default_timezone_set("Asia/Bangkok");
     </div>
 </div>
 <style>
-    table,
+    /* table,
     th,
     td {
         border: 1px solid black;
+    } */
+    table {
+		border-collapse: collapse;
+		width: fit-content;
+		color: rgb(226, 82, 195);
+		height: fit-content;
+		background-color: #ffc9de;
+	}
+    /*รายการสินค้า*/
+    h3{
+        font-size: 200%;
+		padding: 20px;
+		color: rgb(162, 104, 238);
     }
+    tr,td{
+        padding: 10px;
+    }
+    /* หัวตาราง */
+    .head_table td { 
+		background-color: #fffcd1;
+		color: rgb(162, 104, 238);
+		font-size: 150%;
+		text-align: left;
+		padding: 10px;
+	}
 </style>
 
 <body>
@@ -43,7 +67,7 @@ date_default_timezone_set("Asia/Bangkok");
                 <tr>
                     <h3 class="text fw-bold " style="background-color: FCD647  ;">รายการสินค้า</h3>
                 </tr>
-                <tr class="text fw-bold fs-5" style="background-color: FFFFFF;">
+                <tr class="head_table">
                     <td align="center">สินค้า</td>
                     <td align="right">ราคา</td>
                     <td align="right">จำนวน</td>
@@ -99,7 +123,7 @@ date_default_timezone_set("Asia/Bangkok");
 
             ?>
             </br>
-            <h2 class="fw-bold">กรุณากรอกรายละเอียด</h2>
+            <h2 class="address">กรุณากรอกรายละเอียด</h2>
             </p>
             <form method="post" class="fw-bold">
                 <p>ชื่อ</p><input class="form-control" type="text" name="name" value='<?php echo $row1["Name_User"]; ?>'></p>

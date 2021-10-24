@@ -12,8 +12,8 @@
 ul.links {
     list-style-type: none;
     overflow: hidden;
-    background-color: rgb(250, 211, 241);
-    background-color: #e495e4;
+    background-color: #ffc9de;
+    /* background-color: #e495e4; */
     padding: 10px 10px;
 }
 
@@ -22,7 +22,7 @@ ul.links li {
 }
 
 ul.links li a {
-    /* margin-right: 15px; */
+    margin-right: 15px;
     border: 2px solid #fffcd1;
     background-color: #fffcd1;
     border-radius: 20px;
