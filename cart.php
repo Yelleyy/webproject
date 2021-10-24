@@ -55,7 +55,7 @@ if ($op == 'update') {
 		<div align="center">
 			<table>
 				<tr>
-					<h2 class="text fw-bold " style="background-color: ffb ;" align="center">ตะกร้าสินค้า</h2>
+					<h2 align="center">ตะกร้าสินค้า</h2>
 				</tr>
 				<tr class="text fw-bold fs-5 ">
 					<td>สินค้า</td>
@@ -101,13 +101,13 @@ if ($op == 'update') {
 						<td><b>ราคารวม</b></td>
 						<td></td>
 						<td></td>
-						<td ></td>
-						<td ><b> <?php number_format($total, 2);?></b> บาท</td>
-						<td ></td>
+						<td></td>
+						<td><b><?php echo number_format($total, 2);?></b> บาท</td>
+						<td></td>
 					</tr>
 					<tr>
-						<td ><a href='javascript:history.back()'>กลับหน้ารายการสินค้า</a></td>
-						<td ></td>
+						<td><a href='javascript:history.back()'>กลับหน้ารายการสินค้า</a></td>
+						<td></td>
 						<td colspan=4 align=right><input type='submit' value='คำนวณสินค้าใหม่'><a href=confirm.php>สั่งซื้อ</a></td>
 					</tr>
 				<?php } ?>
