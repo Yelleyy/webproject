@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 // if (!isset($_SESSION['email'])) {
 // 	echo "<script type='text/javascript'>";
 // 	echo "alert('กรุณาเข้าสู่ระบบ');";
@@ -86,7 +86,6 @@ if ($op == 'update') {
 						$row = $stmt->fetch();
 						$sum = $row['price'] * $qty;
 						$total += $sum;
-
 						echo "<tr >";
 						echo "<td >" . $row["Food_Name"] . "</td>";
 						echo "<td align='center'><img src='img/" . $row["PicFood"] . "' width='50%' height='150px'></td>";
