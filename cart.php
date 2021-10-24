@@ -50,10 +50,10 @@ if ($op == 'update') {
 	td {
 		height: fit-content;
 		padding: 10px;
-
 	}
 
-	.head_table th {
+	/*หัวตาราง*/
+	.head_table th { 
 		background-color: #fffcd1;
 		color: rgb(162, 104, 238);
 		font-size: 150%;
@@ -61,33 +61,37 @@ if ($op == 'update') {
 		padding: 10px;
 
 	}
-
+	
+	/* ท้ายตาราง */
 	.foot_table td {
 		background-color: #fffcd1;
 		color: rgb(162, 104, 238);
 		font-size: 150%;
 	}
 
+	/* ตะกร้าสินค้า */
 	h2 {
 		font-size: 200%;
 		padding: 20px;
 		color: rgb(162, 104, 238);
-		text-shadow: 3px 4px #fffcd1;
 	}
 
+	/* ลิ้งกลับหน้าแรก */
 	.home a {
 		text-decoration: none;
 		color: rgb(226, 82, 195);
 		font-size: 150%;
 	}
 
+	/* สั่งซื้อ */
 	.confirm a {
 		text-decoration: none;
 		color: rgb(226, 82, 195);
 		font-size: 150%;
 		padding: 10px;
 	}
-
+	
+	/* ปุ่มคำนวณสินค้าใหม่ */
 	.submit {
 		background-color: rgb(226, 82, 195);
 		border-color: #fffcd1;
@@ -104,6 +108,7 @@ if ($op == 'update') {
 		text-decoration: none;
 	}
 
+	/* ปุ่มคำนวณสินค้าใหม่ */
 	.submit:hover {
 		opacity: 1
 	}
