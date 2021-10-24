@@ -37,17 +37,46 @@ if ($op == 'update') {
 ?>
 <!DOCTYPE html>
 <html>
+<style>
+	table {
+		border-collapse: collapse;
+		width: fit-content;
+		color: rgb(226, 82, 195);
+		height: fit-content;
+		background-color: #ffc9de;
+		/* border-radius: 20px; */
+	}
+	.head_table tr,
+	td {
+		height: fit-content;
+		padding: 10px;
+	}
+	.head_table th {
+		background-color: #fffcd1;
+		color: rgb(162, 104, 238);
+		font-size: 150%;		
+	}
+	.foot_table td {
+		background-color: #fffcd1;
+		color: rgb(162, 104, 238);
+		font-size: 150%;
+	}
+	h2 {
+		font-size: 200%;
+		padding: 20px;
+		color: rgb(162, 104, 238);
+		text-shadow: 3px 4px #fffcd1;
+	}
+	.home a {
+		text-decoration: none;
+		color: rgb(226, 82, 195);
+		font-size: 150%;		
+	}
+</style>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
-<style>
-	table,
-	tr,
-	td {
-		border: 1px solid black;
-	}
-</style>
 
 <body>
 	<form id="frmcart" name="frmcart" method="post" action="?op=update">
@@ -57,13 +86,13 @@ if ($op == 'update') {
 				<tr>
 					<h2 align="center">ตะกร้าสินค้า</h2>
 				</tr>
-				<tr class="text fw-bold fs-5 ">
-					<td>สินค้า</td>
-					<td align='center'>รูป</td>
-					<td>ราคา</td>
-					<td>จำนวน</td>
-					<td>รวม</td>
-					<td></td>
+				<tr class="head_table">
+					<th>สินค้า</th>
+					<th align='center'>รูป</th>
+					<th>ราคา</th>
+					<th>จำนวน</th>
+					<th>รวม</th>
+					<th></th>
 				</tr>
 				<?php
 				$total = 0;
@@ -96,19 +125,19 @@ if ($op == 'update') {
 						echo "<td ><a href='cart.php?ID_Product=$ID_Food&op=remove' class='btn btn-danger btn-xs'>ลบ</a></td>";
 						echo "</tr>";
 					}
-					?>
-					<tr>
+				?>
+					<tr class="foot_table">
 						<td><b>ราคารวม</b></td>
 						<td></td>
 						<td></td>
 						<td></td>
-						<td><b><?php echo number_format($total, 2);?></b> บาท</td>
+						<td><b><?php echo number_format($total, 2); ?></b> บาท</td>
 						<td></td>
 					</tr>
 					<tr>
-						<td><a href='javascript:history.back()'>กลับหน้ารายการสินค้า</a></td>
+						<td class="home"><a href='javascript:history.back()'>กลับหน้ารายการสินค้า</a></td>
 						<td></td>
-						<td colspan=4 align=right><input type='submit' value='คำนวณสินค้าใหม่'><a href=confirm.php>สั่งซื้อ</a></td>
+						<td colspan=4 align=right><input type='submit' value='คำนวณสินค้าใหม่'><br><a href=confirm.php>สั่งซื้อ</a></td>
 					</tr>
 				<?php } ?>
 			</table>
