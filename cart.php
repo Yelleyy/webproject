@@ -44,34 +44,70 @@ if ($op == 'update') {
 		color: rgb(226, 82, 195);
 		height: fit-content;
 		background-color: #ffc9de;
-		/* border-radius: 20px; */
 	}
+
 	.head_table tr,
 	td {
 		height: fit-content;
 		padding: 10px;
+
 	}
+
 	.head_table th {
 		background-color: #fffcd1;
 		color: rgb(162, 104, 238);
-		font-size: 150%;		
+		font-size: 150%;
+		text-align: left;
+		padding: 10px;
+
 	}
+
 	.foot_table td {
 		background-color: #fffcd1;
 		color: rgb(162, 104, 238);
 		font-size: 150%;
 	}
+
 	h2 {
 		font-size: 200%;
 		padding: 20px;
 		color: rgb(162, 104, 238);
 		text-shadow: 3px 4px #fffcd1;
 	}
+
 	.home a {
 		text-decoration: none;
 		color: rgb(226, 82, 195);
-		font-size: 150%;		
+		font-size: 150%;
 	}
+
+	.confirm a {
+		text-decoration: none;
+		color: rgb(226, 82, 195);
+		font-size: 150%;
+		padding: 10px;
+	}
+
+	.submit {
+		background-color: rgb(226, 82, 195);
+		border-color: #fffcd1;
+		border-radius: 5px;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		opacity: 0.6;
+		transition: 0.3s;
+		text-decoration: none;
+	}
+
+	.submit:hover {
+		opacity: 1
+	}
+	
 </style>
 
 <head>
@@ -137,7 +173,9 @@ if ($op == 'update') {
 					<tr>
 						<td class="home"><a href='javascript:history.back()'>กลับหน้ารายการสินค้า</a></td>
 						<td></td>
-						<td colspan=4 align=right><input type='submit' value='คำนวณสินค้าใหม่'><br><a href=confirm.php>สั่งซื้อ</a></td>
+						<td class="confirm" colspan=4 align=right><input type='submit' class="submit" value='คำนวณสินค้าใหม่'>
+							<a href=confirm.php>สั่งซื้อ</a>
+						</td>
 					</tr>
 				<?php } ?>
 			</table>
