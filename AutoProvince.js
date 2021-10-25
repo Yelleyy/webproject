@@ -10,34 +10,35 @@
         }, options);
 
         return this.each(function() {
-            var xml;
-            var dataUrl = "thailand.json";
+            var json;
+            var dataUrl = "./thailand.json";
 
 
             $(function() {
                 initialize();
             });
 
-            function initialize() {
-                $.getJSON({
-                    type: "GET",
-                    url: dataUrl,
-                    dataType: "xml",
-                    success: function(xmlDoc) {
-                        xml = $(xmlDoc);
 
+            function initialize() {
+
+                $.ajax({
+                    type: "GET",
+                    url: "./thailand.json",
+                    dataType: "json",
+                    success: function(jsonDoc) {
+                        json = $(jsonDoc);
                         _loadProvince();
                         addEventList();
                     },
                     error: function() {
-                        console.log("Failed to get xml");
+                        console.log("Failed to get json");
                     }
                 });
             }
 
             function _loadProvince() {
                 var list = [];
-                xml.find('table').each(function(index) {
+                json.find('table').each(function(index) {
                     if ($(this).attr("name") == Setting.PROVINCE.split("#")[1]) {
                         var PROVINCE_ID = $(this).children().eq(0).text();
                         var PROVINCE_NAME = $(this).children().eq(2).text();
@@ -56,7 +57,7 @@
                 var list = [];
                 var isFirst = true;
                 $(Setting.AMPHUR).empty();
-                xml.find('table').each(function(index) {
+                json.find('table').each(function(index) {
                     if ($(this).attr("name") == Setting.AMPHUR.split("#")[1]) {
                         var AMPHUR_ID = $(this).children().eq(0).text();
                         var AMPHUR_NAME = $(this).children().eq(2).text();
@@ -80,7 +81,7 @@
             function _loadDistrict(AMPHUR_ID_SELECTED) {
                 var list = [];
                 $(Setting.DISTRICT).empty();
-                xml.find('table').each(function(index) {
+                json.find('table').each(function(index) {
                     if ($(this).attr("name") == Setting.DISTRICT.split("#")[1]) {
                         var DISTRICT_ID = $(this).children().eq(0).text();
                         var DISTRICT_NAME = $(this).children().eq(2).text();

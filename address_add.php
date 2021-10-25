@@ -16,6 +16,45 @@ include("tools.php");
 ?>
 <!DOCTYPE html>
 <html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dependencies/JQL.min.js"></script>
+<script type="text/javascript" src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dependencies/typeahead.bundle.js"></script>
+
+<link rel="stylesheet" href="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.css">
+<script type="text/javascript" src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.js"></script>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	.container {
+		max-width: 1000px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.container h2 {
+		margin: 20px 0;
+	}
+
+	.form-control {
+		width: 50%;
+		margin-bottom: 20px;
+	}
+
+	.txt {
+		width: 100%;
+		background: #f2f2f2;
+		outline: none;
+		border: none;
+		padding: 10px;
+		border-radius: 10px;
+		font-size: 1rem;
+	}
+</style>
 
 <head>
 
@@ -24,29 +63,38 @@ include("tools.php");
 <body>
 	<br><br><br>
 	<div class="container">
-		<div class="row">
-			<div class="col col-8">
-				<div class="card">
-					<div class="card-header">
-						<h4 class="card-title">เพิ่มที่อยู่</h4>
-					</div>
-					<div class="card-body">
-						<div class="basic-form">
-							<form action='address_adddb.php' method="POST" enctype="multipart/form-data">
-								<div class="form-row">
-									<div class="form-group col-md-6">
-										<label>รายละเอียดที่อยู่</label>
-										<textarea type="textarea" rows="10" cols="30" name="address" class="form-control"></textarea>
-										<br><button type="submit" class="btn btn-primary">ยืนยัน</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
+		<div class="card-header">
+			<h4 class="card-title">เพิ่มที่อยู่</h4>
+		</div>
+		<div class="container">
+			<h2>Thailand.js</h2>
+			<div class="form-control">
+				<span>ตำบล/แขวง</span>
+				<input id="district" type="text" class="txt" placeholder="ตำบล">
+			</div>
+			<div class="form-control">
+				<span>อำเภอ/เขต</span>
+				<input id="amphoe" type="text" class="txt" placeholder="อำเภอ">
+			</div>
+			<div class="form-control">
+				<span>จังหวัด</span>
+				<input id="province" type="text" class="txt" placeholder="จังหวัด">
+			</div>
+			<div class="form-control">
+				<span>รหัสไปรษณีย์</span>
+				<input id="zipcode" type="text" class="txt" placeholder="รหัสไปรษณีย์">
 			</div>
 		</div>
+
 	</div>
 </body>
+<script>
+	$.Thailand({
+		$district: $("#district"), // input ของตำบล
+		$amphoe: $("#amphoe"), // input ของอำเภอ
+		$province: $("#province"), // input ของจังหวัด
+		$zipcode: $("#zipcode") // input ของรหัสไปรษณีย์
+	});
+</script>
 
 </html>
