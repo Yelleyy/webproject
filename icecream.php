@@ -17,14 +17,19 @@ $stmt->execute();
 
 
 <body class="grid">
-    <h1 style="font-size: 60px;">เมนูไอศกรีม</h1>
-    <ul class="auto-grid">
-    
-    <?php while ($row = $stmt->fetch()) : ?>
-       <li class="grid"><img src="img/<?=$row[4];?>" width="100%"><?= $row[1]; ?>
-       <p>ราคา <?=$row[3];?> บาท</p><a href="cart.php?ID_Product=<?=$row[0]?>&op=add"><p>ซื้อ</p></li></a>
-    <?php endwhile; ?>
-    </ul>
+    <div class="center">
+        <h1 style="font-size: 60px;">เมนูไอศกรีม</h1>
+        <ul class="auto-grid">
+
+            <?php while ($row = $stmt->fetch()) : ?>
+                <li class="grid"><img src="img/<?= $row[4]; ?>" width="100%"><?= $row[1]; ?>
+                    <p>ราคา <?= $row[3]; ?> บาท</p><a href="cart.php?ID_Product=<?= $row[0] ?>&op=add">
+                        <p>ซื้อ</p>
+                </li></a>
+            <?php endwhile; ?>
+        </ul>
+    </div>
+
 </body>
 
 </html>

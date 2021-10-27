@@ -38,3 +38,12 @@ li.grid:hover {
     font-size: 1.8rem;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
+
+.center {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+h1 {
+    margin-top: 20px;
+}
