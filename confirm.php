@@ -39,6 +39,7 @@ date_default_timezone_set("Asia/Bangkok");
 		color: rgb(226, 82, 195);
 		height: fit-content;
 		background-color: #ffc9de;
+        
 	}
     /*รายการสินค้า*/
     h3{
