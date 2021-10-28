@@ -130,7 +130,7 @@ $stmt->execute();
 
     
 </body>
-
+<?php include("footer.php"); ?>
 </html>
 <script>
     function click() {
