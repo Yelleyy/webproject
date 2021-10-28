@@ -24,14 +24,13 @@ if ($op == 'add' && !empty($ID_Product)) {
 }
 
 if ($op == 'remove' && !empty($ID_Product)) {
-
 	unset($_SESSION['cart'][$ID_Product]);
 }
 
 if ($op == 'update') {
-	$amount_array = $_POST['amount'];
+	$amount_array =$_POST['amount'];
 	foreach ($amount_array as $ID_Product => $amount) {
-		$_SESSION['cart'][$ID_Product] = $amount;
+		$_SESSION['cart'][$ID_Product] = number_format($amount);
 	}
 }
 ?>
@@ -161,7 +160,7 @@ if ($op == 'update') {
 						echo "<td align='center'><img src='img/" . $row["PicFood"] . "' width='50%' height='150px'></td>";
 						echo "<td >" . number_format($row["price"], 2) . " บาท</td>";
 						echo "<td >";
-						echo "<input type='text' name='amount[$ID_Food]' value='" . number_format($qty) . "' size='2'/> ชิ้น</td>";
+						echo "<input type='text' name='amount[".number_format(ceil($ID_Food))."]' value='" . number_format(ceil($qty)) . "' size='2'/> ชิ้น</td>";
 						echo "<td >" . number_format($sum, 2) . " บาท</td>";
 						echo "<td ><a href='cart.php?ID_Product=$ID_Food&op=remove' class='btn btn-danger btn-xs'>ลบ</a></td>";
 						echo "</tr>";
