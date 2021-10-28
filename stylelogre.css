@@ -66,3 +66,13 @@ body {
     text-align: center;
     margin: 10px auto;
 }
+
+.approved {
+    background: white url("img/true.gif") no-repeat;
+    background-position: 150px 1px;
+}
+
+.denied {
+    background: #FF8282 url("img/false.gif") no-repeat;
+    background-position: 150px 1px;
+}

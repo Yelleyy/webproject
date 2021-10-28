@@ -65,6 +65,7 @@ $('document').ready(function() {
     $('#Pass_User, #Pass_User2').on('keyup', function() {
         if ($('#Pass_User').val() == $('#Pass_User2').val()) {
             Pass_User_state = true;
+
             $('#Pass_User2').siblings("span").text("Matching").css('color', 'green');
         } else
             $('#Pass_User2').siblings("span").text("No Matching").css('color', 'red');
@@ -90,11 +91,12 @@ $('document').ready(function() {
                     'Name_User': Name_User
                 },
                 success: function(response) {
-                    alert('User saved');
+                    alert('ลงทะเบียนสำเร็จ');
                     $('#Tel_User').val('');
                     $('#Email_User').val('');
                     $('#Pass_User').val('');
                     $('#Name_User').val('');
+                    // header("location: index.php");
                 }
             })
         }

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Register</title>
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="stylelogre.css">
 </head>
 <body>
 	
@@ -17,7 +17,7 @@
         </div>
 
         <div>
-            <input type="email" name="Email_User" placeholder="อีเมล์" id="Email_User" required>
+            <input type="email" name="Email_User" placeholder="อีเมล" id="Email_User" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
             <span></span>
         </div>     
 
@@ -27,11 +27,11 @@
         </div>
 		
 		<div>
-			<input type="password" name="Pass_User" placeholder="รหัสผ่าน" id="Pass_User">
+			<input type="password" name="Pass_User" placeholder="รหัสผ่าน" id="Pass_User" required>
 		</div>
 
 		<div>
-			<input type="password" name="Pass_User2" placeholder="ยืนยันรหัสผ่าน" id="Pass_User2">
+			<input type="password" name="Pass_User2" placeholder="ยืนยันรหัสผ่าน" id="Pass_User2" required>
 			<span></span>
 		</div>
 		<div>

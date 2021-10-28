@@ -1,6 +1,8 @@
 <?php 
+    // session_start();
+    include('connect.php');
 
-    $db = mysqli_connect('localhost', 'root', '', 'cn');
+    // $db = mysqli_connect('localhost', 'root', '', 'cn');
 
     if (isset($_POST['Tel_User_check'])) {
         $Tel_User = $_POST['Tel_User'];
@@ -37,9 +39,10 @@
             echo "exists";
             exit();
         } else {
-            $query = "INSERT INTO user (Name_User,Tel_User, Email_User, Pass_User) VALUES ('$Name_User','$Tel_User', '$Email_User', '".md5($Pass_User)."')";
+            $query = "INSERT INTO user (Name_User,Tel_User, Email_User, Pass_User) VALUES ('$Name_User','$Tel_User', '$Email_User', '$Pass_User')";
             $results = mysqli_query($db, $query);
             echo 'Saved';
+            header("location: index.php");
             exit();
         }
     }
