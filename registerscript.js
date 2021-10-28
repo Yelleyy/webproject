@@ -22,12 +22,12 @@ $('document').ready(function() {
                     Tel_User_state = false;
                     $('#Tel_User').parent().removeClass();
                     $('#Tel_User').parent().addClass('form_error');
-                    $('#Tel_User').siblings("span").text("Sorry... Tel already taken");
+                    $('#Tel_User').siblings("span").text("เบอร์โทรนี้ถูกใช้แล้ว");
                 } else if (response == "not_taken") {
                     Tel_User_state = true;
                     $('#Tel_User').parent().removeClass();
                     $('#Tel_User').parent().addClass('form_success');
-                    $('#Tel_User').siblings("span").text("Tel available");
+                    $('#Tel_User').siblings("span").text("เบอร์โทรนี้สามารถใช้งานได้");
                 }
             }
         })
@@ -51,12 +51,14 @@ $('document').ready(function() {
                     Email_User_state = false;
                     $('#Email_User').parent().removeClass();
                     $('#Email_User').parent().addClass('form_error');
-                    $('#Email_User').siblings("span").text("Sorry... Email already taken");
+                    $('#Email_User').siblings("span").text("อีเมลนี้ถูกใช้แล้ว");
                 } else if (response == "not_taken") {
                     Email_User_state = true;
                     $('#Email_User').parent().removeClass();
                     $('#Email_User').parent().addClass('form_success');
-                    $('#Email_User').siblings("span").text("Email available");
+                    $('#Email_User').siblings("span").text("อีเมลนี้สามารถใช้งานได้");
+
+
                 }
             }
         })
@@ -66,9 +68,9 @@ $('document').ready(function() {
         if ($('#Pass_User').val() == $('#Pass_User2').val()) {
             Pass_User_state = true;
 
-            $('#Pass_User2').siblings("span").text("Matching").css('color', 'green');
+            $('#Pass_User2').siblings("span").text("รหัสผ่านตรงกัน").css('color', 'green');
         } else
-            $('#Pass_User2').siblings("span").text("No Matching").css('color', 'red');
+            $('#Pass_User2').siblings("span").text("รหัสผ่านไม่ตรงกัน").css('color', 'red');
     });
 
     $('#reg_btn').on("click", function(e) {

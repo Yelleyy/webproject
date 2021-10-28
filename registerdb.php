@@ -42,7 +42,7 @@
             $query = "INSERT INTO user (Name_User,Tel_User, Email_User, Pass_User) VALUES ('$Name_User','$Tel_User', '$Email_User', '$Pass_User')";
             $results = mysqli_query($db, $query);
             echo 'Saved';
-            header("location: index.php");
+            // header("location: index.php");
             exit();
         }
     }

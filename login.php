@@ -15,33 +15,12 @@
 </head>
 <body>
     
-    <!-- <form action="logindb.php" method="post">
-        <?php if (isset($_SESSION['error'])) : ?>
-            <div class="error">
-                <h3>
-                    <?php 
-                        echo $_SESSION['error'];
-                        unset($_SESSION['error']);
-                    ?>
-                </h3>
-            </div>
-        <?php endif ?>
-        <div class="input-group">
-            <label for="Email_User">Email_User</label>
-            <input type="text" name="Email_User">
-        </div>
-        <div class="input-group">
-            <label for="Pass_User">Password</label>
-            <input type="password" name="Pass_User">
-        </div>
-        <div class="input-group">
-            <button type="submit" name="login_user" class="btn">Login</button>
-        </div>
-        <p>Not yet a member? <a href="register.php">Sign Up</a></p>
-    </form> -->
+    
 
     <form id="register_form" action="logindb.php" method="post">
 
+    <h1>เข้าสู่ระบบ</h1>
+
         <?php if (isset($_SESSION['error'])) : ?>
             <div class="error">
                 <h3>
@@ -53,9 +32,9 @@
             </div>
         <?php endif ?>
 
-		<h1>Login</h1>
+		
         
-		<div id="error_msg"></div>
+		<!-- <div id="error_msg"></div> -->
 		
 		<div>
             <input type="text" name="Email_User" placeholder="อีเมล" id="Email_User" >
@@ -66,11 +45,11 @@
 			<input type="password" name="Pass_User" placeholder="รหัสผ่าน" id="Pass_User">
 		</div>
 		<div>
-			<button type="submit" name="login_user"  class="btn" id="reg_btn">Login</button>
+			<button type="submit" name="login_user"  class="btn" id="reg_btn">เข้าสู่ระบบ</button>
 		</div>
 
         <div >          
-            <p>You don't have a account register here <a href="register.php">Register</a></p>
+            <p>ยังไม่มีบัญชีใช่ไหม <a href="register.php">สมัครเข้าใช้งาน</a></p>
         </div>
 	</form>
 </body>

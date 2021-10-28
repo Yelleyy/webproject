@@ -11,7 +11,7 @@
 <body>
 	
 	<form id="register_form">
-		<h1>Register</h1>
+		<h1>สมัครเข้าใช้งาน</h1>
 		<div id="error_msg"></div>
 		<input type="text" name="Name_User" placeholder="ชื่อ-สกุล" id="Name_User" required>
         </div>
@@ -22,7 +22,7 @@
         </div>     
 
         <div>
-            <input type="tel" name="Tel_User" placeholder="เบอร์โทร" id="Tel_User"  pattern="0[0-9]{9}" required>
+            <input type="tel" name="Tel_User" placeholder="เบอร์โทร" id="Tel_User"  pattern="0[1-9]{9}" required>
 			<span></span>
         </div>
 		
@@ -35,10 +35,10 @@
 			<span></span>
 		</div>
 		<div>
-			<button tyoe="button" name="register" id="reg_btn">Register</button>
+			<button tyoe="button" name="register" id="reg_btn">สมัครเพื่อเข้าใช้งาน</button>
 		</div>
 		<div>          
-			<p>You have a account login here <a href="login.php">Login</a></p>
+			<p>มีบัญชีแล้วใช่ไหม <a href="login.php">เข้าสู่ระบบ</a></p>
         </div>
 	</form>
 
