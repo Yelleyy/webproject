@@ -138,13 +138,3 @@ $stmt->execute();
 </body>
 <?php include("footer.php"); ?>
 </html>
-<script>
-    function click() {
-        var x = document.getElementById("cat");
-        if (x.className === "b") {
-            x.className += "active";
-        } else {
-            x.className = "b";
-        }
-    }
-</script>

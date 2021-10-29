@@ -1,7 +1,7 @@
 <?php
 include "tools.php";
 include "connect.php";
-$stmt = $pdo->prepare("select * from categoryf where category='bakery'");
+$stmt = $pdo->prepare("select * from categoryf where category= 'beverage'");
 $stmt->execute();
 
 ?>
@@ -20,14 +20,12 @@ $stmt->execute();
         <h1 style="font-size: 60px;">หมวดเครื่องดื่ม</h1>
         <ul class="auto-grid">
             <?php while ($row = $stmt->fetch()) : ?>
-                <a href="cart.php?ID_Product=<?= $row[0] ?>&op=add">
-                    <li class="grid"><img src="img/<?= $row[2]; ?>" width="100%"><?= $row[1]; ?>
-                    </li>
-                </a>
+                <a href="cart.php?ID_Product=<?= $row[0] ?>&op=add"> 
+                <li class="grid"><img src="img/<?= $row[2]; ?>" width="100%"><?= $row[1]; ?>
+                </li></a>
             <?php endwhile; ?>
         </ul>
     </div>
-
 </body>
 <br>
 <footer class="site-footer">

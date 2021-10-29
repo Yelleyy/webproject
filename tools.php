@@ -27,10 +27,8 @@ include "connect.php";
         <ul class="links" id="nav">
             <li><strong><a href="index.php">GYP DESSERT</a></li></strong>
             <li><a href="index.php">หน้าหลัก</a></li>
-            <li><a href="coffee.php">กาแฟ</a></li>
+            <li><a href="beverage.php">เครื่องดื่ม</a></li>
             <li><a href="bakery.php">ขนม</a></li>
-            <li><a href="tea.php">ชา</a></li>
-            <li><a href="icecream.php">ไอศกรีม</a></li>
             <?php if (isset($_SESSION['email'])) : ?>
 
                 <li class="right" style="font-weight: bold;">
