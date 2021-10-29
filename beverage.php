@@ -20,7 +20,7 @@ $stmt->execute();
         <h1 style="font-size: 60px;">หมวดเครื่องดื่ม</h1>
         <ul class="auto-grid">
             <?php while ($row = $stmt->fetch()) : ?>
-                <a href="cart.php?ID_Product=<?= $row[0] ?>&op=add"> 
+                <a href="buyfood.php?ID_CATF=<?= $row[0] ?>"> 
                 <li class="grid"><img src="img/<?= $row[2]; ?>" width="100%"><?= $row[1]; ?>
                 </li></a>
             <?php endwhile; ?>

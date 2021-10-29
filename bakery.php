@@ -17,10 +17,10 @@ $stmt->execute();
 
 <body class="grid">
     <div class="center">
-        <h1 style="font-size: 60px;">หมวดเครื่องดื่ม</h1>
+        <h1 style="font-size: 60px;">หมวดขนม</h1>
         <ul class="auto-grid">
             <?php while ($row = $stmt->fetch()) : ?>
-                <a href="cart.php?ID_Product=<?= $row[0] ?>&op=add">
+                <a href="buyfood.php?ID_CATF=<?= $row[0] ?>">
                     <li class="grid"><img src="img/<?= $row[2]; ?>" width="100%"><?= $row[1]; ?>
                     </li>
                 </a>
@@ -35,4 +35,5 @@ $stmt->execute();
         <span style="font-size: 1.3rem;">Copyright © 2021 All Rights Reserved by <a href="index.php" style="color: black;">GYP Dessert </a> <br>Phone : 099-XXX-XXXX<br> Location : XX/XXX บ้าน XX กรุงเทพมหานคร 10800 </span>
     </div>
 </footer>
+
 </html>
