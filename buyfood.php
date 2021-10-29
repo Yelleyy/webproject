@@ -1,6 +1,12 @@
 <?php
+session_start();
 include "tools.php";
 include "connect.php";
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['email']);
+    header('location: login.php');
+}
 $ID_CATF=$_REQUEST["ID_CATF"];
 $stmt = $pdo->prepare("select * from stock where ID_CATF=$ID_CATF");
 $stmt->execute();
