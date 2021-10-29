@@ -1,16 +1,16 @@
 <?php
 session_start();
-// if (!isset($_SESSION['email'])) {
-//     echo "<script type='text/javascript'>";
-//     echo "alert('กรุณาเข้าสู่ระบบ');";
-//     echo "window.location = 'login.php'; ";
-//     echo "</script>";
-// }
-// if (isset($_GET['logout'])) {
-//     session_destroy();
-//     unset($_SESSION['email']);
-//     header('location: login.php');
-// }
+if (!isset($_SESSION['email'])) {
+    echo "<script type='text/javascript'>";
+    echo "alert('กรุณาเข้าสู่ระบบ');";
+    echo "window.location = 'login.php'; ";
+    echo "</script>";
+}
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['email']);
+    header('location: login.php');
+}
 include("tools.php");
 include("connect.php");
 date_default_timezone_set("Asia/Bangkok");
