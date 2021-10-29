@@ -70,7 +70,7 @@ $('document').ready(function() {
 
             $('#Pass_User2').siblings("span").text("รหัสผ่านตรงกัน").css('color', 'green');
         } else
-            $('#Pass_User2').siblings("span").text("รหัสผ่านไม่ตรงกัน").css('color', 'red');
+            $('#Pass_User2').siblings("span").text("รหัสผ่านไม่ตรงกันน").css('color', 'red');
     });
 
     $('#reg_btn').on("click", function(e) {
@@ -98,7 +98,8 @@ $('document').ready(function() {
                     $('#Email_User').val('');
                     $('#Pass_User').val('');
                     $('#Name_User').val('');
-                    // header("location: index.php");
+                    // window.location = 'index.php';
+                    header("location: index.php");
                 }
             })
         }

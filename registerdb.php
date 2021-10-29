@@ -1,9 +1,5 @@
 <?php 
-    // session_start();
-    include('connect.php');
-
-    // $db = mysqli_connect('localhost', 'root', '', 'cn');
-
+    include('connect2.php');
     if (isset($_POST['Tel_User_check'])) {
         $Tel_User = $_POST['Tel_User'];
         $sql = "SELECT * FROM user WHERE Tel_User = '$Tel_User' ";
@@ -42,7 +38,7 @@
             $query = "INSERT INTO user (Name_User,Tel_User, Email_User, Pass_User) VALUES ('$Name_User','$Tel_User', '$Email_User', '$Pass_User')";
             $results = mysqli_query($db, $query);
             echo 'Saved';
-            // header("location: index.php");
+            header("location: index.php");
             exit();
         }
     }
