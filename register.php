@@ -42,7 +42,7 @@
 		<div>
 			<button tyoe="button" name="register" id="reg_btn">สมัครเพื่อเข้าใช้งาน</button>
 		</div>
-		<div>          
+		<div class="createaccount">          
 			<p>มีบัญชีแล้วใช่ไหม <a href="login.php">เข้าสู่ระบบ</a></p>
 			<a href="index.php">กลับหน้าหลัก</a>
         </div>
