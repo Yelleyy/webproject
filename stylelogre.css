@@ -83,16 +83,16 @@
 
 ::-webkit-input-placeholder {
     /* Edge */
-    color: #fffcd1;
+    color: white;
 }
 
  :-ms-input-placeholder {
     /* Internet Explorer */
-    color: #fffcd1;
+    color: white;
 }
 
  ::placeholder {
-    color: #fffcd1;
+    color: white;
 }
 
 .noaccountyet {
