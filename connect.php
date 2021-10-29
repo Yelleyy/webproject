@@ -3,7 +3,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "gyp";
+    $dbname = "gypdb";
 
     // Create Connection
     $db = mysqli_connect($servername, $username, $password, $dbname);
