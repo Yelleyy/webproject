@@ -146,3 +146,24 @@
         display: block;
     }
 }
+
+@media screen and (max-width: 1060px) {
+    #register_form {
+        width: auto%;
+    }
+    #register_form h1 {
+        text-align: center;
+        color: rgb(226, 82, 195);
+        font-size: 100%;
+    }
+    .noaccountyet a {
+        font-size: 80%;
+        margin: 10px;
+        display: block;
+    }
+    .createaccount a {
+        font-size: 80%;
+        margin: 10px;
+        display: block;
+    }
+}
