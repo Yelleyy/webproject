@@ -26,7 +26,12 @@ if ($op == 'add' && !empty($ID_Product)) {
 if ($op == 'remove' && !empty($ID_Product)) {
 	unset($_SESSION['cart'][$ID_Product]);
 }
-
+if ($op == 'delete') {
+	for ($i=0; $i <100 ; $i++) { 
+		unset($_SESSION['cart'][$i]);
+	}
+	
+}
 if ($op == 'update') {
 	$amount_array =$_POST['amount'];
 	foreach ($amount_array as $ID_Product => $amount) {
@@ -75,23 +80,8 @@ if ($op == 'update') {
 		color: rgb(162, 104, 238);
 	}
 
-	/* ลิ้งกลับหน้าแรก */
-	.home a {
-		text-decoration: none;
-		color: rgb(226, 82, 195);
-		font-size: 150%;
-	}
-
-	/* สั่งซื้อ */
-	.confirm a {
-		text-decoration: none;
-		color: rgb(226, 82, 195);
-		font-size: 150%;
-		padding: 10px;
-	}
-	
-	/* ปุ่มคำนวณสินค้าใหม่ */
-	.submit {
+	/* ปุ่มทั้งหมด */
+	.submit,td a,th a,.home a {
 		background-color: rgb(226, 82, 195);
 		border-color: #fffcd1;
 		border-radius: 5px;
@@ -113,11 +103,9 @@ if ($op == 'update') {
 	}
 	
 </style>
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
-
 <body>
 	<form id="frmcart" name="frmcart" method="post" action="?op=update">
 		<br>
@@ -132,23 +120,11 @@ if ($op == 'update') {
 					<th>ราคา</th>
 					<th>จำนวน</th>
 					<th>รวม</th>
-					<th></th>
+					<th><a href='cart.php?op=delete' >ลบทั้งตระกร้า</a></th>
 				</tr>
 				<?php
 				$total = 0;
 				if (!empty($_SESSION['cart'])) {
-					include("connect.php");
-					// if (!isset($_SESSION['email'])) {
-					// 	echo "<script type='text/javascript'>";
-					// 	echo "alert('กรุณาเข้าสู่ระบบ');";
-					// 	echo "window.location = 'login.php'; ";
-					// 	echo "</script>";
-					// }
-					// if (isset($_GET['logout'])) {
-					// 	session_destroy();
-					// 	unset($_SESSION['email']);
-					// 	header('location: login.php');
-					// }
 					foreach ($_SESSION['cart'] as $ID_Food => $qty) {
 						$stmt = $pdo->prepare("SELECT * FROM `stock` where ID_Food='$ID_Food'");
 						$stmt->execute();
@@ -162,7 +138,7 @@ if ($op == 'update') {
 						echo "<td >";
 						echo "<input type='text' name='amount[".number_format(ceil($ID_Food))."]' value='" . number_format(ceil($qty)) . "' size='2'/> ชิ้น</td>";
 						echo "<td >" . number_format($sum, 2) . " บาท</td>";
-						echo "<td ><a href='cart.php?ID_Product=$ID_Food&op=remove' class='btn btn-danger btn-xs'>ลบ</a></td>";
+						echo "<td ><a href='cart.php?ID_Product=$ID_Food&op=remove'>ลบ</a></td>";
 						echo "</tr>";
 					}
 				?>
@@ -177,8 +153,10 @@ if ($op == 'update') {
 					<tr>
 						<td class="home"><a href='javascript:history.back()'>กลับหน้ารายการสินค้า</a></td>
 						<td></td>
-						<td class="confirm" colspan=4 align=right><input type='submit' class="submit" value='คำนวณสินค้าใหม่'>
-							<a href=confirm.php>สั่งซื้อ</a>
+						<td class="confirm" colspan=3 align=right><input type='submit' class="submit" value='คำนวณสินค้าใหม่'>
+						</td>
+						<td class="confirm" align=right>
+							<button class="submit" href=confirm.php>สั่งซื้อ</button>
 						</td>
 					</tr>
 				<?php } ?>
