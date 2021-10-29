@@ -7,7 +7,7 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['email']);
     header('location: login.php');
 }
-$ID_CATF=$_REQUEST["ID_CATF"];
+$ID_CATF = $_REQUEST["ID_CATF"];
 $stmt = $pdo->prepare("select * from stock where ID_CATF=$ID_CATF");
 $stmt->execute();
 $stmt1 = $pdo->prepare("select * from categoryf where ID_CATF=$ID_CATF");
@@ -27,8 +27,8 @@ $stmt1->execute();
 
 <body class="grid">
     <div class="center">
-    <?php $row1=$stmt1->fetch()?>
-        <h1 style="font-size: 60px;">เมนู<?=$row1[1]?></h1>
+        <?php $row1 = $stmt1->fetch() ?>
+        <h1 style="font-size: 60px;">เมนู<?= $row1[1] ?></h1>
         <ul class="auto-grid">
 
             <?php while ($row = $stmt->fetch()) : ?>

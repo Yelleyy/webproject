@@ -117,7 +117,7 @@ date_default_timezone_set("Asia/Bangkok");
             <p>Email</p>
             <fieldset disabled><input class="form-control" name="email" type="email" value='<?php echo $row1["Email_User"];
                                                                                             $email = $row1["Email_User"]; ?>'></fieldset>
-            <p>Phone</p> <input class="form-control" type="text" name="phone" pattern="[0]{1}[0-9]{9}" required value='<?php echo $row1["Tel_User"]; ?>'></p>
+            <p>Phone</p> <input class="form-control" type="text" name="phone" pattern="0[0-9]{9}" required value='<?php echo $row1["Tel_User"]; ?>'></p>
             <div class="input-group mb-3">
                 <label class="input-group-text" for="inputGroupSelect01">เลือกที่อยู่</label>
                 <select id="inputGroupSelect01" name="id" class="form-control">
@@ -145,28 +145,26 @@ date_default_timezone_set("Asia/Bangkok");
                 echo "window.location = 'confirm.php'; ";
                 echo "</script>";
             }
-            $sql1    = "INSERT into orderh (O_date,TotalAmount,TotalPrice,ID_Address,ID_User) values ('$dttm', '$total_qty', '$total','$address', '$ID_User')";
-
-            $query1    = mysqli_query($con, $sql1);
-            $sql2 = "SELECT max(ID_Order) as ID_Order from orderh where ID_User='$ID_User' and O_date='$dttm' ";
-            $query2    = mysqli_query($con, $sql2);
-            $row2 = mysqli_fetch_array($query2);
+            $stmt6 = $pdo->prepare("INSERT into orderh (O_date,TotalAmount,TotalPrice,ID_Address,ID_User) values ('$dttm', '$total_qty', '$total','$address', '$ID_User')");
+            $stmt6->execute();
+            $stmt2 = $pdo->prepare("SELECT max(ID_Order) as ID_Order from orderh where ID_User='$ID_User' and O_date='$dttm'");
+            $stmt2->execute();
+            $row2 = $stmt2->fetch();
             $ID_Order = $row2['ID_Order'];
 
-
             foreach ($_SESSION['cart'] as $ID_Product => $qty) {
-                $sql3    = "SELECT * FROM `stock` WHERE ID_Food=$ID_Product";
-                $query3    = mysqli_query($con, $sql3);
-                $row3    = mysqli_fetch_array($query3);
+                $stmt3 = $pdo->prepare("SELECT * FROM `stock` WHERE ID_Food=$ID_Product");
+                $stmt3->execute();
+                $row3    = $stmt3->fetch();
                 $total    = $row3['price'] * $qty;
                 $Food_Name = $row3['Food_Name'];
                 $PicFood = $row3['PicFood'];
-                $sql4    = "INSERT into detail (foodname,price,amount,ID_Food,ID_Order) values ('$Food_Name','$total','$qty','$ID_Product', '$ID_Order')";
-                $query4    = mysqli_query($con, $sql4);
+                $stmt4 = $pdo->prepare("INSERT into detail (foodname,price,amount,ID_Food,ID_Order) values ('$Food_Name','$total','$qty','$ID_Product', '$ID_Order')");
+                $stmt4->execute();
             }
             echo "<script type='text/javascript'>";
             echo "alert('สั่งซื้อเรียบร้อย..');";
-            echo "window.location = 'index.php'; ";
+            echo "window.location = 'status.php'; ";
             echo "</script>";
         }
         ?>
