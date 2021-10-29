@@ -41,8 +41,10 @@
 			<button type="submit" name="login_user"  class="btn" id="reg_btn">เข้าสู่ระบบ</button>
 		</div>
 
-        <div >          
-            <p>ยังไม่มีบัญชีใช่ไหม <a href="register.php">สมัครเข้าใช้งาน</a></p>
+        <div class="noaccountyet">          
+            <p>ยังไม่มีบัญชีใช่ไหม 
+                <a href="register.php">
+                    สมัครเข้าใช้งาน</a></p>
             <a href="index.php">กลับหน้าหลัก</a>
         </div>
 	</form>

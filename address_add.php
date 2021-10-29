@@ -45,7 +45,7 @@ include("tools.php");
 
 	.txt {
 		width: 100%;
-		background: #f2afb4;
+		background: rgb(226, 82, 195);
 		outline: none;
 		border: none;
 		padding: 10px;
@@ -55,7 +55,7 @@ include("tools.php");
 
 	.btn {
 		cursor: pointer;
-		background: #f2afb4;
+		background: rgb(226, 82, 195);
 		padding: 8px;
 		border-radius: 13px;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
