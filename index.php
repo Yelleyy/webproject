@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['email']);
+    header('location: login.php');
+  }
 include "tools.php";
 include "connect.php";
 $stmt = $pdo->prepare("select * from categoryf");
@@ -130,7 +136,7 @@ $stmt->execute();
 
     
 </body>
-
+<?php include("footer.php"); ?>
 </html>
 <script>
     function click() {
