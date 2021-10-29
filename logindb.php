@@ -11,8 +11,7 @@
             $query = "SELECT * FROM user WHERE Email_User = '$Email_User' AND Pass_User = '$Pass_User' ";
             $result = mysqli_query($db, $query);
             if (mysqli_num_rows($result) == 1) {
-                $_SESSION['Email_User'] = $Email_User;
-                $_SESSION['success'] = "";
+                $_SESSION['email'] = $Email_User;
                 $row = mysqli_fetch_array($result);
                 if($row["Level"]=="admin"){
                     Header("Location: admin.php");
