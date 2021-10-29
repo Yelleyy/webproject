@@ -9,7 +9,7 @@
 </style>
 <br>
 <footer class="site-footer">
-    <div class="center">
-        <span style="font-size: 80%;">Copyright © 2021 All Rights Reserved by <a href="index.php" style="color: black;">Yelley </a> <br>Phone : 099-XXX-XXXX<br> Location : XX/XXX บ้าน XX กรุงเทพมหานคร 10800 </span>
+    <div class="centerf">
+        <span style="font-size: 80%;">Copyright © 2021 All Rights Reserved by <a href="index.php" style="color: black;">GYP Dessert </a> <br>Phone : 099-XXX-XXXX<br> Location : XX/XXX บ้าน XX กรุงเทพมหานคร 10800 </span>
     </div>
 </footer>
