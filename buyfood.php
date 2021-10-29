@@ -1,8 +1,11 @@
 <?php
 include "tools.php";
 include "connect.php";
-$stmt = $pdo->prepare("select * from stock where category='coffee'");
+$ID_CATF=$_REQUEST["ID_CATF"];
+$stmt = $pdo->prepare("select * from stock where ID_CATF=$ID_CATF");
 $stmt->execute();
+$stmt1 = $pdo->prepare("select * from categoryf where ID_CATF=$ID_CATF");
+$stmt1->execute();
 
 ?>
 <!DOCTYPE html>
@@ -18,8 +21,10 @@ $stmt->execute();
 
 <body class="grid">
     <div class="center">
-        <h1 style="font-size: 60px;">เมนูกาแฟ</h1>
+    <?php $row1=$stmt1->fetch()?>
+        <h1 style="font-size: 60px;">เมนู<?=$row1[1]?></h1>
         <ul class="auto-grid">
+
             <?php while ($row = $stmt->fetch()) : ?>
                 <li class="grid"><img src="img/<?= $row[4]; ?>" width="100%"><?= $row[1]; ?>
                     <p>ราคา <?= $row[3]; ?> บาท</p><a href="cart.php?ID_Product=<?= $row[0] ?>&op=add">
@@ -28,6 +33,7 @@ $stmt->execute();
             <?php endwhile; ?>
         </ul>
     </div>
+
 </body>
 
 </html>
