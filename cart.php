@@ -26,7 +26,7 @@ if ($op == 'add' && !empty($ID_Product)) {
 if ($op == 'remove' && !empty($ID_Product)) {
 	unset($_SESSION['cart'][$ID_Product]);
 }
-if ($op == 'delete') {
+if ($op == 'delete') { //ดักลบแบบใหม่ นับจำนวนรายการทั้งหมด
 	for ($i=0; $i <100 ; $i++) { 
 		unset($_SESSION['cart'][$i]);
 	}
@@ -156,7 +156,7 @@ if ($op == 'update') {
 						<td class="confirm" colspan=3 align=right><input type='submit' class="submit" value='คำนวณสินค้าใหม่'>
 						</td>
 						<td class="confirm" align=right>
-							<button class="submit" href=confirm.php>สั่งซื้อ</button>
+							<a class="submit" href=confirm.php>สั่งซื้อ</a>
 						</td>
 					</tr>
 				<?php } ?>
