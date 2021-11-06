@@ -26,14 +26,18 @@ if ($op == 'add' && !empty($ID_Product)) {
 if ($op == 'remove' && !empty($ID_Product)) {
 	unset($_SESSION['cart'][$ID_Product]);
 }
+$stmt1 = $pdo->prepare("SELECT * FROM `stock` ORDER BY `stock`.`ID_Food` DESC");
+$stmt1->execute();
+$row1=$stmt1->fetch();
+// echo "<h1> $row1[0]</h1>";
 if ($op == 'delete') { //ดักลบแบบใหม่ นับจำนวนรายการทั้งหมด
-	for ($i=0; $i <100 ; $i++) { 
+	for ($i = 0; $i < $row1[0]; $i++) {
 		unset($_SESSION['cart'][$i]);
 	}
-	
 }
 if ($op == 'update') {
-	$amount_array =$_POST['amount'];
+	$amount_array = $_POST['amount'];
+	
 	foreach ($amount_array as $ID_Product => $amount) {
 		$_SESSION['cart'][$ID_Product] = number_format($amount);
 	}
@@ -57,7 +61,7 @@ if ($op == 'update') {
 	}
 
 	/*หัวตาราง*/
-	.head_table th { 
+	.head_table th {
 		background-color: #fffcd1;
 		color: rgb(162, 104, 238);
 		font-size: 150%;
@@ -65,7 +69,7 @@ if ($op == 'update') {
 		padding: 10px;
 
 	}
-	
+
 	/* ท้ายตาราง */
 	.foot_table td {
 		background-color: #fffcd1;
@@ -81,7 +85,10 @@ if ($op == 'update') {
 	}
 
 	/* ปุ่มทั้งหมด */
-	.submit,td a,th a,.home a {
+	.submit,
+	td a,
+	th a,
+	.home a {
 		background-color: rgb(226, 82, 195);
 		border-color: #fffcd1;
 		border-radius: 5px;
@@ -93,19 +100,20 @@ if ($op == 'update') {
 		margin: 4px 2px;
 		cursor: pointer;
 		opacity: 0.6;
-		transition: 0.3s;
+		transition: 0.4s;
 		text-decoration: none;
 	}
 
 	/* ปุ่มคำนวณสินค้าใหม่ */
-	.submit:hover {
+	.submit:hover,.home a:hover,th a:hover,td a:hover {
 		opacity: 1
 	}
-	
 </style>
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
+
 <body>
 	<form id="frmcart" name="frmcart" method="post" action="?op=update">
 		<br>
@@ -116,11 +124,11 @@ if ($op == 'update') {
 				</tr>
 				<tr class="head_table">
 					<th>สินค้า</th>
-					<th align='center'>รูป</th>
+					<th>รูป</th>
 					<th>ราคา</th>
 					<th>จำนวน</th>
 					<th>รวม</th>
-					<th><a href='cart.php?op=delete' >ลบทั้งตระกร้า</a></th>
+					<th><a href='cart.php?op=delete'>ลบทั้งตระกร้า</a></th>
 				</tr>
 				<?php
 				$total = 0;
@@ -131,12 +139,12 @@ if ($op == 'update') {
 						$row = $stmt->fetch();
 						$sum = $row['price'] * $qty;
 						$total += $sum;
-						echo "<tr >";
+						echo "<tr align='left'>";
 						echo "<td >" . $row["Food_Name"] . "</td>";
-						echo "<td align='center'><img src='img/" . $row["PicFood"] . "' width='50%' height='150px'></td>";
+						echo "<td ><img src='img/" . $row["PicFood"] . "'  width='150px' height='auto'></td>";
 						echo "<td >" . number_format($row["price"], 2) . " บาท</td>";
 						echo "<td >";
-						echo "<input type='text' name='amount[".number_format(ceil($ID_Food))."]' value='" . number_format(ceil($qty)) . "' size='2'/> ชิ้น</td>";
+						echo "<input type='text' name='amount[" . number_format(ceil($ID_Food)) . "]' value='" . number_format(ceil($qty)) . "' size='2'/> ชิ้น</td>";
 						echo "<td >" . number_format($sum, 2) . " บาท</td>";
 						echo "<td ><a href='cart.php?ID_Product=$ID_Food&op=remove'>ลบ</a></td>";
 						echo "</tr>";
