@@ -22,22 +22,20 @@ if ($op == 'add' && !empty($ID_Product)) {
 		$_SESSION['cart'][$ID_Product] = 1;
 	}
 }
-
 if ($op == 'remove' && !empty($ID_Product)) {
 	unset($_SESSION['cart'][$ID_Product]);
 }
 $stmt1 = $pdo->prepare("SELECT * FROM `stock` ORDER BY `stock`.`ID_Food` DESC");
 $stmt1->execute();
-$row1=$stmt1->fetch();
+$row1 = $stmt1->fetch();
 // echo "<h1> $row1[0]</h1>";
-if ($op == 'delete') { //ดักลบแบบใหม่ นับจำนวนรายการทั้งหมด
+if ($op == 'delete') { //ลบจากไอดีอาหารที่มีทั้งหมด
 	for ($i = 0; $i < $row1[0]; $i++) {
 		unset($_SESSION['cart'][$i]);
 	}
 }
 if ($op == 'update') {
 	$amount_array = $_POST['amount'];
-	
 	foreach ($amount_array as $ID_Product => $amount) {
 		$_SESSION['cart'][$ID_Product] = number_format($amount);
 	}
@@ -105,17 +103,18 @@ if ($op == 'update') {
 	}
 
 	/* ปุ่มคำนวณสินค้าใหม่ */
-	.submit:hover,.home a:hover,th a:hover,td a:hover {
+	.submit:hover,
+	.home a:hover,
+	th a:hover,
+	td a:hover {
 		opacity: 1
 	}
 </style>
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
-
 <body>
-	<form id="frmcart" name="frmcart" method="post" action="?op=update">
+	<form method="post" action="?op=update">
 		<br>
 		<div align="center">
 			<table>
