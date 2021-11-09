@@ -14,7 +14,7 @@
                 $_SESSION['email'] = $Email_User;
                 $row = mysqli_fetch_array($result);
                 if($row["Level"]=="admin"){
-                    Header("Location: admin.php");
+                    Header("Location: listuser.php");
                 }
                 else if($row["Level"]=="member"){
                     header("location: index.php");

@@ -129,6 +129,11 @@ ul.links li.icon {
     }
 }
 
+.center {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
 .centerf {
     margin: 0 auto;
     max-width: 700px;
