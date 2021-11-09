@@ -92,15 +92,15 @@ $('document').ready(function() {
                     'Pass_User': Pass_User,
                     'Name_User': Name_User
                 },
-                success: function(response) {
+                success: function() {
                     alert('ลงทะเบียนสำเร็จ');
                     $('#Tel_User').val('');
                     $('#Email_User').val('');
                     $('#Pass_User').val('');
                     $('#Name_User').val('');
-                    // window.location = 'index.php';
-                    header("location: index.php");
+                    window.location.href = "index.php";
                 }
+
             })
         }
     });
