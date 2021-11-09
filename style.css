@@ -139,14 +139,18 @@ ul.links li.icon {
     max-width: 700px;
 }
 
+
+/*admintools*/
+
 #cssmenu,
 #cssmenu ul,
 #cssmenu ul li,
 #cssmenu ul li a {
     font-weight: 700px;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     border: 0;
+    border-spacing: 15px 50px;
     border-radius: 20px;
     list-style: none;
     line-height: 1;
@@ -155,12 +159,14 @@ ul.links li.icon {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    float: left;
 }
 
 #cssmenu {
     width: 220px;
     font-family: Raleway, sans-serif;
-    color: #ffffff;
+    color: #ff00f2;
+    background-color: #fffcd1;
 }
 
 #cssmenu ul ul {
@@ -176,20 +182,21 @@ ul.links li.icon {
 }
 
 #cssmenu>ul>li>a {
-    padding: 16px 22px;
+    padding: 16px 50px 22px 50px;
     cursor: pointer;
     z-index: 2;
     font-size: 16px;
     text-decoration: none;
-    color: #ffffff;
-    background: #ff00f2;
+    color: #ff00f2;
+    /* background: #fffcd1; */
     -webkit-transition: color .2s ease;
     -o-transition: color .2s ease;
     transition: color .2s ease;
 }
 
 #cssmenu>ul>li>a:hover {
-    color: #d8f3f0;
+    background-color: #ff00f2;
+    color: #fffcd1;
 }
 
 #cssmenu ul>li.has-sub>a:after {
@@ -200,7 +207,7 @@ ul.links li.icon {
     display: block;
     height: 10px;
     width: 2px;
-    background: #ffffff;
+    background: #ff00f2;
     content: "";
     -webkit-transition: all 0.1s ease-out;
     -moz-transition: all 0.1s ease-out;
@@ -216,7 +223,7 @@ ul.links li.icon {
     display: block;
     width: 10px;
     height: 2px;
-    background: #ffffff;
+    background: #ff00f2;
     content: "";
     -webkit-transition: all 0.1s ease-out;
     -moz-transition: all 0.1s ease-out;
@@ -240,8 +247,8 @@ ul.links li.icon {
     z-index: 2;
     font-size: 14px;
     text-decoration: none;
-    color: #000000;
-    background: #db94e9;
+    color: #ff00f2;
+    /* background: #db94e9; */
     -webkit-transition: color .2s ease;
     -o-transition: color .2s ease;
     transition: color .2s ease;
@@ -252,16 +259,45 @@ ul.links li.icon {
 }
 
 #cssmenu ul ul li a:hover {
-    color: #ffffff;
+    background-color: #ff00f2;
+    color: #fffcd1;
 }
 
 #cssmenu ul ul>li.has-sub>a:after {
     top: 16px;
     right: 26px;
-    background: #dddddd;
+    background: #fffcd1;
 }
 
 #cssmenu ul ul>li.has-sub>a:before {
     top: 20px;
-    background: #dddddd;
+    background: #fffcd1;
+}
+
+.navbar {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #ffc9de;
+    padding: 10px 10px;
+}
+
+.navbar li a {
+    margin-right: 15px;
+    border: 2px solid #fffcd1;
+    background-color: #fffcd1;
+    border-radius: 20px;
+    display: inline-block;
+    color: rgb(162, 104, 238);
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+    transiton: all 0.5s ease-in-out;
+}
+
+.navbar li a:hover {
+    background-color: rgb(226, 82, 195);
+    color: #fffcd1;
+    border: 2px solid rgb(226, 82, 195);
 }
