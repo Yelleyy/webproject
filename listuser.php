@@ -26,6 +26,7 @@ include("admintools.php");
                     <td data-th="อีเมล"><?=$row[3]?></td>
                     <td data-th="รหัสผ่าน"><?=$row[4]?></td>
                     <td data-th="เบอร์โทร"><?=$row[1]?></td>
+                    <td><a href="listuser_edit.php?ID=<?=$row[0]?>">แก้ไข</a> <a href="deluser.php?ID=<?=$row[0]?>" onclick="return confirm('คุณแน่ใจแล้วหรอที่จะลบ !!!')">ลบ</a></td>
                 </tr>
                 <?php endwhile; ?>
             </tbody>
