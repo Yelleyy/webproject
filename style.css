@@ -273,31 +273,3 @@ ul.links li.icon {
     top: 20px;
     background: #fffcd1;
 }
-
-.navbar {
-    list-style-type: none;
-    overflow: hidden;
-    background-color: #ffc9de;
-    padding: 10px 10px;
-}
-
-.navbar li a {
-    margin-right: 15px;
-    border: 2px solid #fffcd1;
-    background-color: #fffcd1;
-    border-radius: 20px;
-    display: inline-block;
-    color: rgb(162, 104, 238);
-    text-align: center;
-    padding: 20px 16px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 20px;
-    transiton: all 0.5s ease-in-out;
-}
-
-.navbar li a:hover {
-    background-color: rgb(226, 82, 195);
-    color: #fffcd1;
-    border: 2px solid rgb(226, 82, 195);
-}

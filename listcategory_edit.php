@@ -11,6 +11,7 @@ if (!isset($_SESSION['email'])) {
     echo "window.location = 'login.php'; ";
     echo "</script>";
 }
+include("navbar.php");
 include("connect.php");
 $ID_CATF = $_REQUEST["ID"];
 $stmt1 = $pdo->prepare("SELECT * FROM categoryf WHERE ID_CATF = '$ID_CATF'");
@@ -23,14 +24,18 @@ $stmt1->execute();
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body >
+<body>
     <br><br><br><br>
-    <form action='listcategory_update.php?ID=<?php echo "$ID_User"; ?>' method="post" enctype="multipart/form-data">
+    <form action='listcategory_update.php?ID=<?php echo "$ID_CATF"; ?>' method="post" enctype="multipart/form-data">
         <?php $row1 = $stmt1->fetch(); ?>
-        <div class="center"  style="font-size: 1.5rem;">
-        <div>
+        <div class="center" style="font-size: 1.5rem;">
+            <div>
                 <label>ไอดี</label>
                 <input type="text" name="ID_CATF" value=<?php echo $row1['ID_CATF']; ?>>
+            </div>
+            <div>
+                <label>ประเภท</label>
+                <input type="text" name="category" value=<?php echo $row1['category']; ?>>
             </div>
             <div>
                 <label>ชื่อ</label>
@@ -38,7 +43,7 @@ $stmt1->execute();
             </div>
             <div>
                 <label>รูป</label>
-                <input type="text" name="Pic" value=<?php echo $row1['Pic']; ?>>
+                <input type="file" name="Pic" value=<?php echo $row1['Pic']; ?>>
             </div>
             <button type="submit" name="upload">แก้ไข</button>
     </form>

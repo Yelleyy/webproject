@@ -1,3 +1,6 @@
+<?php
+include("navbar.php");
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,12 +17,7 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul>
-            <strong><li><a href="index.php">GYP DESSERT</a></li></strong>
-        </ul>
 
-    </nav>
     <div id='cssmenu'>
         <ul>
             <li><a href='listuser.php'>รายการผู้ใช้งาน</a>
