@@ -35,7 +35,10 @@ include "connect.php";
                     <a href="index.php?logout='1'" style="color: red;">ออกจากระบบ</a>
                 </li>
                 <li class="right">
-                    <a class="right" href="invoice.php">ตรวจสอบสถานะ</a>
+                    <a class="right" href="status.php">ตรวจสอบสถานะ</a>
+                </li>
+                <li class="right">
+                    <a class="right" href="cart.php"><img src="./img/shopping-cart.png" width="18px" style="color: rgb(162, 104, 238);"></a>
                 </li>
                 <li class="right">
                     <a style="font-weight: bold;">
