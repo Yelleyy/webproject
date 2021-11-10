@@ -149,7 +149,7 @@
 
 @media screen and (max-width: 1060px) {
     #register_form {
-        width: auto%;
+        width: auto;
     }
     #register_form h1 {
         text-align: center;
