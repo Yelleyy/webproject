@@ -1,3 +1,6 @@
+<?php
+include("navbar.php");
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +15,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <title>GYP Dessert</title>
 </head>
+
 <body>
+
     <div id='cssmenu'>
         <ul>
             <li><a href='listuser.php'>รายการผู้ใช้งาน</a>
@@ -20,6 +25,12 @@
                 <ul>
                     <li><a href='listfood.php'>รายการอาหาร</a></li>
                     <li><a href='addfood.php'>เพิ่มรายการอาหาร</a></li>
+                </ul>
+            </li>
+            <li class="has-sub"><a href='#'>จัดการหมวดหมู่</a>
+                <ul>
+                    <li><a href='listcategory.php'>รายการหมวดหมู่</a></li>
+                    <li><a href='addcategory.php'>เพิ่มรายการหมวดหมู่</a></li>
                 </ul>
             </li>
             </li>
