@@ -13,7 +13,7 @@ if ($stmt) {
 } else {
     echo "<script type='text/javascript'>";
     echo "alert('มีบางอย่างผิดพลาดลองอีกครั้ง');";
-    echo "window.location = 'listuser.php'; ";
+    echo "window.location = 'listfood.php'; ";
     echo "</script>";
 }
 ?>
