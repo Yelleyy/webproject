@@ -3,14 +3,16 @@
 session_start();
 include('connect.php');
 
-$Name_User = $_POST['Name_User'];
-$Email_User =  $_POST['Email_User'];
-$Pass_User =  $_POST['Pass_User'];
-$Tel_User =  $_POST['Tel_User'];
-$ID_User = $_REQUEST["ID"];
 
-$stmt = $pdo->prepare("UPDATE user SET Name_User='$Name_User',Email_User='$Email_User',Pass_User='$Pass_User',Tel_User='$Tel_User'
- WHERE ID_User=$ID_User ");
+$ID_CATF = $_POST['ID_CATF'];
+$CATF_Name =  $_POST['CATF_Name'];
+$Pic =  $_POST['Pic'];
+$category =  $_POST['category'];
+
+
+$stmt = $pdo->prepare("UPDATE categoryf SET ID_CATF = '$ID_CATF',CATF_Name =  '$CATF_Name',Pic =  '$Pic',category =  '$category'
+ WHERE ID_CATF=$ID_CATF ");
+
 $stmt->execute();
 
 if ($stmt) {
