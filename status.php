@@ -21,7 +21,13 @@ include("tools.php");
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="./table.css">
 </head>
-
+<style>
+    a:visited,a:link{
+        color: #fff2dc;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+</style>
 <body>
     <br>
     <?php
@@ -77,7 +83,7 @@ include("tools.php");
                 ?>
             </table>
         </div>
-        <a type="submit" href="index.php" class='btn btn-success' />กลับหน้าแรก</a>
+        <a type="submit" href="javascript:history.back()">กลับหน้าแรก</a>
     </div>
 </body>
 
