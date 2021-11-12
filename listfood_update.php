@@ -7,9 +7,11 @@ $Food_Name = $_POST['Food_Name'];
 $amount =  $_POST['amount'];
 $price =  $_POST['price'];
 $PicFood =  $_POST['PicFood'];
-$ID_Food = $_REQUEST["ID"];
+$ID_CATF =  $_POST['catf'];
 
-$stmt = $pdo->prepare("UPDATE stock SET Food_Name='$Food_Name',amount='$amount',price='$price',PicFood='$PicFood'
+$ID_Food= $_REQUEST["ID"];
+
+$stmt = $pdo->prepare("UPDATE stock SET Food_Name='$Food_Name',amount='$amount',price='$price',PicFood='$PicFood',ID_CATF='$ID_CATF'
  WHERE ID_Food=$ID_Food ");
 $stmt->execute();
 

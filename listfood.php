@@ -16,7 +16,7 @@ include("admintools.php");
                 </tr>
             </thead>
             <tbody>
-                <?php $stmt=$pdo->prepare("select * from stock");
+                <?php $stmt=$pdo->prepare("SELECT * FROM `stock` join categoryf on stock.ID_CATF=categoryf.ID_CATF ORDER BY `stock`.`ID_Food` ASC");
                 $stmt->execute();
                 while ($row=$stmt->fetch()):           
                 ?>
@@ -25,7 +25,7 @@ include("admintools.php");
                     <td data-th="ชื่อ"><?=$row[1]?></td>
                     <td data-th="ราคา"><?=$row[3]?></td>
                     <td data-th="รูป"> <img src='img/<?=$row["PicFood"]?>' width='100'></td>
-                    <td data-th="หมวดหมู่"><?=$row[5]?></td>
+                    <td data-th="หมวดหมู่"><?=$row[7]?></td>
                     <td><a href="listfood_edit.php?ID=<?=$row[0]?>">แก้ไข</a> <a href="delfood.php?ID=<?=$row[0]?>" onclick="return confirm('คุณแน่ใจแล้วหรอที่จะลบ !!!')">ลบ</a></td>
                 </tr>
                 <?php endwhile; ?>
