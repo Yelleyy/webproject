@@ -67,10 +67,13 @@ $('document').ready(function() {
     $('#Pass_User, #Pass_User2').on('keyup', function() {
         if ($('#Pass_User').val() == $('#Pass_User2').val()) {
             Pass_User_state = true;
-
+            $('#Pass_User2').parent().removeClass();
+            $('#Pass_User2').parent().addClass('form_success');
             $('#Pass_User2').siblings("span").text("รหัสผ่านตรงกัน").css('color', 'green');
         } else
-            $('#Pass_User2').siblings("span").text("รหัสผ่านไม่ตรงกันน").css('color', 'red');
+            $('#Pass_User2').parent().removeClass();
+        $('#Pass_User2').parent().addClass('form_error');
+        $('#Pass_User2').siblings("span").text("รหัสผ่านไม่ตรงกันน").css('color', 'red');
     });
 
     $('#reg_btn').on("click", function(e) {
@@ -92,15 +95,15 @@ $('document').ready(function() {
                     'Pass_User': Pass_User,
                     'Name_User': Name_User
                 },
-                success: function(response) {
+                success: function() {
                     alert('ลงทะเบียนสำเร็จ');
                     $('#Tel_User').val('');
                     $('#Email_User').val('');
                     $('#Pass_User').val('');
                     $('#Name_User').val('');
-                    // window.location = 'index.php';
-                    header("location: index.php");
+                    window.location.href = "index.php";
                 }
+
             })
         }
     });

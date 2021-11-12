@@ -1,6 +1,3 @@
-<?php
-include("navbar.php");
-?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +14,11 @@ include("navbar.php");
 </head>
 
 <body>
-
+    <nav class="nav">
+        <ul class="links" id="nav">
+            <li><strong><a href="listuser.php">GYP DESSERT</a></li></strong>
+        </ul>
+    </nav>
     <div id='cssmenu'>
         <ul>
             <li><a href='listuser.php'>รายการผู้ใช้งาน</a>
@@ -33,10 +34,12 @@ include("navbar.php");
                     <li><a href='addcategory.php'>เพิ่มรายการหมวดหมู่</a></li>
                 </ul>
             </li>
+            <li><a href='listorder.php'>รายการออเดอร์</a>
+            </li>
             </li>
             <li><a href='index.php?logout=1'>ออกจากระบบ</a></li>
         </ul>
     </div>
-
+    <br><br>
 </body>
 <script src="./navadmin.js"></script>

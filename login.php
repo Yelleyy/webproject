@@ -44,7 +44,8 @@
         <div class="noaccountyet">          
             <p>ยังไม่มีบัญชีใช่ไหม 
                 <a href="register.php">
-                    สมัครเข้าใช้งาน</a></p>
+                    สมัครเข้าใช้งาน
+                </a></p>
             <a href="index.php">กลับหน้าหลัก</a>
         </div>
 	</form>

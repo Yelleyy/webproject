@@ -13,12 +13,8 @@ if (!isset($_SESSION['email'])) {
 }
 include("admintools.php");
 include("connect.php");
-
-$ID_CATF = $_GET["ID_CATF"];
-$CATF_Name = $_GET["CATF_Name"];
-$Pic = $_GET["Pic"];
-$category = $_GET["category"];
-
+$stmt2 = $pdo->prepare("SELECT * FROM categoryf");
+$stmt2->execute();
 
 ?>
 <!DOCTYPE html>
@@ -28,30 +24,42 @@ $category = $_GET["category"];
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    div{
+    div {
         line-height: 40px;
     }
 </style>
+
 <body>
     <br><br><br><br>
-    <form action='addcategory_db.php' method="post" enctype="multipart/form-data">
+    <form action='addfood_db.php' method="post" enctype="multipart/form-data">
         <div class="center" style="font-size: 1.5rem;">
             <div>
                 <label>ชื่อ</label>
                 <input type="text" name="name">
             </div>
             <div>
+                <label>จำนวน</label>
+                <input type="text" name="amount">
+            </div>
+            <div>
+                <label>ราคา</label>
+                <input type="text" name="price">
+            </div>
+            <div>
                 <label>รูป</label>
                 <input type="file" name="pic">
             </div>
+
             <div>
-                <label>ประเภท</label>
-                <select name="category" id="category">
-                    <option value="1">ขนม</option>
-                    <option value="2">เครื่องดื่ม</option>
+                <label>หมวดหมู่</label>
+                <select name="catf">>
+                    <?php
+                    while ($row2 = $stmt2->fetch()) {
+                        echo "<option value=" . $row2["ID_CATF"] . " >" . $row2["CATF_Name"] . "</option>";
+                    }
+                    ?>
                 </select>
             </div>
-            
             <button type="submit" name="upload">บันทึก</button>
     </form>
 
