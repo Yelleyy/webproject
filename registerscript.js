@@ -69,12 +69,13 @@ $('document').ready(function() {
             Pass_User_state = true;
             $('#Pass_User2').parent().removeClass();
             $('#Pass_User2').parent().addClass('form_success');
-            $('#Pass_User2').siblings("span").text("รหัสผ่านตรงกัน").css('color', 'green');
-        } else
-            Pass_User_state = false;
-        //     $('#Pass_User2').parent().removeClass();
-        // $('#Pass_User2').parent().addClass('form_error');
-        $('#Pass_User2').siblings("span").text("รหัสผ่านไม่ตรงกัน").css('color', 'red');
+            $('#Pass_User2').siblings("span").text("รหัสผ่านตรงกัน");
+        } else {
+            // // Pass_User_state = false;
+            $('#Pass_User2').parent().removeClass();
+            $('#Pass_User2').parent().addClass('form_error');
+            $('#Pass_User2').siblings("span").text("รหัสผ่านไม่ตรงกัน");
+        }
     });
 
     $('#reg_btn').on("click", function(e) {

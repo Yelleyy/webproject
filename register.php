@@ -40,7 +40,7 @@
 			<span></span>
 		</div>
 		<div>
-			<button tyoe="button" name="register" id="reg_btn">สมัครเพื่อเข้าใช้งาน</button>
+			<button type="submit" name="register" id="reg_btn">สมัครเพื่อเข้าใช้งาน</button>
 		</div>
 		<div class="createaccount">          
 			<p>มีบัญชีแล้วใช่ไหม <a href="login.php">เข้าสู่ระบบ</a></p>
