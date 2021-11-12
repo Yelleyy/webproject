@@ -1,0 +1,169 @@
+* {
+    font-size: 1.3rem;
+    /* background-color: #ffc9de; */
+}
+
+#register_form h1 {
+    text-align: center;
+    color: rgb(226, 82, 195);
+    font-size: 150%;
+}
+
+#register_form {
+    text-align: center;
+    width: 37%;
+    margin: 100px auto;
+    padding: 2rem 0;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #ffc9de;
+}
+
+#register_form input {
+    width: 80%;
+    height: 32px;
+    margin: 5px 10px;
+    font-size: 1.1rem;
+    padding: 4px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: #ffc9de;
+}
+
+#reg_btn {
+    height: 35px;
+    width: 80%;
+    margin: 1rem 10%;
+    color: #fffcd1;
+    background: rgb(226, 82, 195);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form_error span {
+    width: 80%;
+    height: 35px;
+    margin: 3px 10%;
+    font-size: 1.1rem;
+    color: #d83d5a;
+}
+
+.form_error input {
+    border: 1px solid #d83d5a;
+}
+
+.form_success span {
+    width: 80%;
+    height: 35px;
+    margin: 3px 10%;
+    font-size: 1.1rem;
+    color: green;
+}
+
+.form_success input {
+    border: 1px solid green;
+}
+
+#error_msg {
+    color: red;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.approved {
+    background: white url("img/true.gif") no-repeat;
+    background-position: 150px 1px;
+}
+
+.denied {
+    background: #FF8282 url("img/false.gif") no-repeat;
+    background-position: 150px 1px;
+}
+
+::-webkit-input-placeholder {
+    /* Edge */
+    color: white;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer */
+    color: white;
+}
+
+ ::placeholder {
+    color: white;
+}
+
+.noaccountyet {
+    margin-top: 10px;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 420px) {
+    #register_form {
+        width: 90%;
+    }
+    #register_form h1 {
+        text-align: center;
+        color: rgb(226, 82, 195);
+        font-size: 100%;
+    }
+    .noaccountyet a {
+        font-size: 80%;
+        margin: 10px;
+        display: block;
+    }
+    .createaccount a {
+        font-size: 80%;
+        margin: 10px;
+        display: block;
+    }
+}
+
+
+/* new class responsive */
+
+@media screen and (max-width: 375px) {
+    #register_form {
+        width: 90%;
+    }
+    #register_form h1 {
+        text-align: center;
+        color: rgb(226, 82, 195);
+        font-size: 100%;
+    }
+    .noaccountyet a {
+        font-size: 80%;
+        margin: 10px;
+        display: block;
+    }
+    .createaccount a {
+        font-size: 80%;
+        margin: 10px;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    #register_form {
+        width: auto;
+    }
+    #register_form h1 {
+        text-align: center;
+        color: rgb(226, 82, 195);
+        font-size: 100%;
+    }
+    .noaccountyet a {
+        font-size: 80%;
+        margin: 10px;
+        display: block;
+    }
+    .createaccount a {
+        font-size: 80%;
+        margin: 10px;
+        display: block;
+    }
+}
