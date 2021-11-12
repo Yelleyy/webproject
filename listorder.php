@@ -8,7 +8,8 @@ include("admintools.php");
     .rwd-table {
         max-width: 70%;
     }
-    a:visited,a:link{
+    a:visited,
+    a:link {
         color: #fff2dc;
         text-decoration: none;
         font-weight: bolder;
@@ -58,7 +59,6 @@ include("admintools.php");
                                      style='color:green;'>รับออเดอร์</a>";
                             } ?>
                         </td>
-                    </tr>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
