@@ -52,10 +52,10 @@ include("admintools.php");
                             echo "</td>";
                             echo "<td align='center'> &nbsp;";
                             if ($row["status"] == "work") {
-                                echo "<a href='changecus.php?ID_Order=$row[0]' onclick=\"return confirm('ยืนยันการยกเลิก... !!!')\" 
+                                echo "<a href='changecusshop1.php?ID_Order=$row[0]' onclick=\"return confirm('ยืนยันการยกเลิกออเดอร์... !!!')\" 
                                      style='color:red;'>ยกเลิกออเดอร์</a> 
-                                     <a href='changecus.php?ID_Order=$row[0]' onclick=\"return confirm('ยืนยันการยกเลิก... !!!')\" 
-                                     style='color:green;' >รับออเดอร์</a>";
+                                     <a href='changecusshop.php?ID_Order=$row[0]' onclick=\"return confirm('ยืนยันการยอมรับออเดอร์... !!!')\" 
+                                     style='color:green;'>รับออเดอร์</a>";
                             } ?>
                         </td>
                     </tr>
