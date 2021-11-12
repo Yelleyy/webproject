@@ -30,7 +30,11 @@
             </div>
         <?php endif ?>
 		<div>
+<<<<<<< Updated upstream
             <input type="email" name="Email_User" placeholder="example@example.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" id="Email_User" required >
+=======
+            <input type="text" name="Email_User" placeholder="อีเมล" id="Email_User" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+>>>>>>> Stashed changes
             <span></span>
         </div>
 
