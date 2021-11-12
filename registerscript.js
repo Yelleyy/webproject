@@ -81,7 +81,7 @@ $('document').ready(function() {
         var Email_User = $("#Email_User").val();
         var Pass_User = $("#Pass_User").val();
         var Name_User = $("#Name_User").val();
-        if (Tel_User_state == false || Email_User_state == false || Pass_User_state == false) {
+        if (Tel_User_state == false || Email_User_state == false || Pass_User_state == false || (!(Name_User))) {
             e.preventDefault();
             $("#error_msg").text("กรอกข้อมูลให้ครบถ้วน");
         } else {
