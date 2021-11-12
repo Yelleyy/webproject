@@ -41,7 +41,7 @@ include("admintools.php");
                         <td data-th="จำนวน"><?= $row[2] ?> รายการ</td>
                         <td data-th="ราคารวม"><?= number_format($row[3], 2) ?> บาท</td>
                         <td data-th="ที่อยู่"><?= $row[8] ?></td>
-                        <td data-th="รายละเอียดออเดอร์"><a href="">ดูรายละเอียด</a></td>
+                        <td data-th="รายละเอียดออเดอร์"><a href="listdetail.php?ID=<?=$row[0]?>">ดูรายละเอียด</a></td>
                         <td data-th="สถานะ" align='center'>
                             <?php if ($row["status"] == "work") {
                                 echo "<a href='#!' type='button'>กำลังดำเนินการ</a>";
