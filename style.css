@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    -webkite-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+
+ul.links {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #ffc9de;
+    /* background-color: #e495e4; */
+    padding: 10px 10px;
+}
+
+ul.links li {
+    float: left;
+}
+
+ul.links li a {
+    margin-right: 15px;
+    border: 2px solid #fffcd1;
+    background-color: #fffcd1;
+    border-radius: 20px;
+    display: inline-block;
+    color: rgb(162, 104, 238);
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+    transiton: all 0.5s ease-in-out;
+}
+
+ul.links li a:hover {
+    background-color: rgb(226, 82, 195);
+    color: #fffcd1;
+    border: 2px solid rgb(226, 82, 195);
+}
+
+ul.links li.icon {
+    display: none;
+}
+
+.links .menu {
+    position: relative;
+}
+
+.links .right {
+    float: right;
+}
+
+.links .menu .submenu {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 220px;
+    background: #fff;
+    padding: 10px;
+    -webkite-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.links .menu .submenu li {
+    padding: 10px;
+}
+
+.links .menu .submenu li a {
+    color: #777;
+    text-decoration: none;
+}
+
+.links .menu .submenu:before {
+    content: "";
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -6px;
+    left: 30px;
+}
+
+.links .menu:hover .submenu {
+    display: block;
+}
+
+
+/* media Queries */
+
+@media screen and (max-width: 750px) {
+    ul.links li:not(:first-child) {
+        display: none;
+    }
+    ul.links li.icon {
+        float: right;
+        display: inline-block;
+    }
+}
+
+
+/* new class responsive */
+
+@media screen and (max-width: 750px) {
+    ul.links.responsive {
+        position: relative;
+    }
+    ul.links.responsive li.icon {
+        position: inherit;
+        right: 0;
+        top: 0;
+    }
+    ul.links.responsive li {
+        float: none;
+        display: inline;
+    }
+    ul.links.responsive li a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        height: 4rem;
+    }
+}
+
+.center {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.centerf {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+
+/*admintools*/
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+    font-weight: 700px;
+    margin: 0;
+    padding: 3px;
+    border: 0;
+    border-spacing: 15px 50px;
+    border-radius: 20px;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+}
+
+#cssmenu {
+    width: 220px;
+    font-family: Raleway, sans-serif;
+    color: #ff00f2;
+    background-color: #fffcd1;
+}
+
+#cssmenu ul ul {
+    display: none;
+}
+
+#cssmenu>ul>li.active>ul {
+    display: inline-block;
+}
+
+.align-right {
+    float: right;
+}
+
+#cssmenu>ul>li>a {
+    padding: 16px 50px 22px 50px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ff00f2;
+    -webkit-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+}
+
+#cssmenu>ul>li>a:hover {
+    background-color: #ff00f2;
+    color: #fffcd1;
+}
+
+#cssmenu ul>li.has-sub>a:after {
+    position: absolute;
+    right: 26px;
+    top: 19px;
+    z-index: 5;
+    display: block;
+    height: 10px;
+    width: 2px;
+    background: #ff00f2;
+    content: "";
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+#cssmenu ul>li.has-sub>a:before {
+    position: absolute;
+    right: 22px;
+    top: 23px;
+    display: block;
+    width: 10px;
+    height: 2px;
+    background: #ff00f2;
+    content: "";
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+#cssmenu ul>li.has-sub.open>a:after,
+#cssmenu ul>li.has-sub.open>a:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#cssmenu ul ul li a {
+    padding: 14px 22px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ff00f2;
+    -webkit-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+}
+
+#cssmenu ul ul ul li a {
+    padding-left: 32px;
+}
+
+#cssmenu ul ul li a:hover {
+    background-color: #ff00f2;
+    color: #fffcd1;
+}
+
+#cssmenu ul ul>li.has-sub>a:after {
+    top: 16px;
+    right: 26px;
+    background: #fffcd1;
+}
+
+#cssmenu ul ul>li.has-sub>a:before {
+    top: 20px;
+    background: #fffcd1;
+}
