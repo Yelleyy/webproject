@@ -6,7 +6,7 @@ include("admintools.php");
 <style>
     .center,
     .rwd-table {
-        max-width: 65%;
+        max-width: 70%;
     }
     a:visited,a:link{
         color: #fff2dc;
@@ -53,7 +53,9 @@ include("admintools.php");
                             echo "<td align='center'> &nbsp;";
                             if ($row["status"] == "work") {
                                 echo "<a href='changecus.php?ID_Order=$row[0]' onclick=\"return confirm('ยืนยันการยกเลิก... !!!')\" 
-                                     type='button' >ยกเลิกออเดอร์</a>";
+                                     style='color:red;'>ยกเลิกออเดอร์</a> 
+                                     <a href='changecus.php?ID_Order=$row[0]' onclick=\"return confirm('ยืนยันการยกเลิก... !!!')\" 
+                                     style='color:green;' >รับออเดอร์</a>";
                             } ?>
                         </td>
                     </tr>
