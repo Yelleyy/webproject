@@ -148,7 +148,7 @@ ul.links li.icon {
 #cssmenu ul li a {
     font-weight: 700px;
     margin: 0;
-    padding: 10px;
+    padding: 3px;
     border: 0;
     border-spacing: 15px 50px;
     border-radius: 20px;
@@ -174,7 +174,7 @@ ul.links li.icon {
 }
 
 #cssmenu>ul>li.active>ul {
-    display: block;
+    display: inline-block;
 }
 
 .align-right {
@@ -188,7 +188,6 @@ ul.links li.icon {
     font-size: 16px;
     text-decoration: none;
     color: #ff00f2;
-    /* background: #fffcd1; */
     -webkit-transition: color .2s ease;
     -o-transition: color .2s ease;
     transition: color .2s ease;

@@ -23,7 +23,7 @@ include("admintools.php");
                 <tr>
                     <td data-th="ไอดี"><?=$row[0]?></td>
                     <td data-th="ชื่อ"><?=$row[1]?></td>
-                    <td data-th="ราคา"><?=$row[3]?></td>
+                    <td data-th="ราคา"><?=number_format($row[3],2)?></td>
                     <td data-th="รูป"> <img src='img/<?=$row["PicFood"]?>' width='100'></td>
                     <td data-th="หมวดหมู่"><?=$row[7]?></td>
                     <td><a href="listfood_edit.php?ID=<?=$row[0]?>">แก้ไข</a> <a href="delfood.php?ID=<?=$row[0]?>" onclick="return confirm('คุณแน่ใจแล้วหรอที่จะลบ !!!')">ลบ</a></td>
