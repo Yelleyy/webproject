@@ -37,6 +37,6 @@ include("navbar.php");
             <li><a href='index.php?logout=1'>ออกจากระบบ</a></li>
         </ul>
     </div>
-
+    <br><br>
 </body>
 <script src="./navadmin.js"></script>
