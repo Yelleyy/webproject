@@ -16,11 +16,11 @@ $stmt->execute();
 if ($stmt) {
     echo "<script type='text/javascript'>";
     echo  "alert('แก้ไขเรียบร้อยเรียบร้อย');";
-    echo "window.location='listuser.php';";
+    echo "window.location='listcategory.php';";
     echo "</script>";
 } else {
     echo "<script type='text/javascript'>";
-    echo "window.location='listuser.php';";
+    echo "window.location='listcategory.php';";
     echo "</script>";
 }
 mysqli_close($con);

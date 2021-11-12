@@ -8,7 +8,7 @@ $stmt->execute();
 if ($stmt) {
     echo "<script type='text/javascript'>";
     echo "alert('ลบเสร็จสิ้น');";
-    echo "window.location = 'listuser.php'; ";
+    echo "window.location = 'listfood.php'; ";
     echo "</script>";
 } else {
     echo "<script type='text/javascript'>";

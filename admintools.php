@@ -33,6 +33,8 @@ include("navbar.php");
                     <li><a href='addcategory.php'>เพิ่มรายการหมวดหมู่</a></li>
                 </ul>
             </li>
+            <li><a href='listorder.php'>รายการออเดอร์</a>
+            </li>
             </li>
             <li><a href='index.php?logout=1'>ออกจากระบบ</a></li>
         </ul>
