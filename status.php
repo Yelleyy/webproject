@@ -21,7 +21,13 @@ include("tools.php");
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="./table.css">
 </head>
-
+<style>
+    a:visited,a:link{
+        color: #fff2dc;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+</style>
 <body>
     <br>
     <?php
@@ -56,7 +62,14 @@ include("tools.php");
                     echo "<td data-th=วันที่>" . $row["O_date"] . "</td>";
                     echo "<td data-th=จำนวนทั้งหมด>" . $row["TotalAmount"] . " ชิ้น</td>";
                     echo "<td data-th=ราคารวม>" .  number_format($row["TotalPrice"], 2) . " บาท</td>";
-                    echo "<td data-th=รายละเอียดออเดอร์><a href='detail.php?ID=$row[0]'>ดูรายการ</a></td> ";
+                    echo "<td data-th=รายละเอียดออเดอร์><a href='detail.php?ID=$row[0]' style='background-color: #fffcd1;
+                    color: #ff00f2;
+                    padding: 3px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    border-radius: 10px;
+                    font-size: 15px' >ดูรายการ</a></td> ";
                     echo "<td data-th=สถานะ align='center'>";
                     if ($row["status"] == "work") {
                         echo "<a href='#!' type='button'>กำลังดำเนินการ</a>";
@@ -69,7 +82,13 @@ include("tools.php");
                     echo "<td align='center'> &nbsp;";
                     if ($row["status"] == "work") {
                         echo "<a href='changecus.php?ID_Order=$row[0]' onclick=\"return confirm('ยืนยันการยกเลิก... !!!')\" 
-                                     type='button' >ยกเลิกออเดอร์</a>";
+                                     type='button' style='background-color: #d0312d;
+                                     color: white;
+                                     padding: 5px;
+                                     text-align: center;
+                                     text-decoration: none;
+                                     display: inline-block;
+                                     border-radius: 10px;'>ยกเลิกออเดอร์</a>";
                     }
                     echo "</td>";
                     echo "</tr>";
@@ -77,7 +96,8 @@ include("tools.php");
                 ?>
             </table>
         </div>
-        <a type="submit" href="index.php" class='btn btn-success' />กลับหน้าแรก</a>
+        <a type="submit" href="javascript:history.back()" 
+        style="color:brown">กลับหน้าแรก</a>
     </div>
 </body>
 
