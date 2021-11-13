@@ -14,6 +14,7 @@
 
 .rwd-table td {
     display: block;
+    table-layout: auto;
 }
 
 .rwd-table td:first-child {
@@ -67,7 +68,7 @@ h1 {
 .rwd-table {
     background: #ee81ca;
     color: #fff;
-    border-radius: .4em;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -89,7 +90,9 @@ h1 {
 
 .rwd-table th,
 .rwd-table td:before {
-    color: rgb(255, 217, 0);
+    color: #fffcd1;
+    width: 10%;
+    text-align: left;
 }
 
 .center {

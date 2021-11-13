@@ -41,7 +41,14 @@ include("admintools.php");
                         <td data-th="จำนวน"><?= $row[2] ?> รายการ</td>
                         <td data-th="ราคารวม"><?= number_format($row[3], 2) ?> บาท</td>
                         <td data-th="ที่อยู่"><?= $row[8] ?></td>
-                        <td data-th="รายละเอียดออเดอร์"><a href="listdetail.php?ID=<?=$row[0]?>">ดูรายละเอียด</a></td>
+                        <td data-th="รายละเอียดออเดอร์"><a href="listdetail.php?ID=<?=$row[0]?>"style='background-color: #fffcd1;
+                                     color: #ff00f2;
+                                     padding: 3px;
+                                     text-align: center;
+                                     text-decoration: none;
+                                     display: inline-block;
+                                     border-radius: 10px;
+                                     font-size: 10px'>ดูรายละเอียด</a></td>
                         <td data-th="สถานะ" align='center'>
                             <?php if ($row["status"] == "work") {
                                 echo "<a href='#!' type='button'>กำลังดำเนินการ</a>";
@@ -54,9 +61,21 @@ include("admintools.php");
                             echo "<td align='center'> &nbsp;";
                             if ($row["status"] == "work") {
                                 echo "<a href='changecusshop1.php?ID_Order=$row[0]' onclick=\"return confirm('ยืนยันการยกเลิกออเดอร์... !!!')\" 
-                                     style='color:red;'>ยกเลิกออเดอร์</a> 
-                                     <a href='changecusshop.php?ID_Order=$row[0]' onclick=\"return confirm('ยืนยันการยอมรับออเดอร์... !!!')\" 
-                                     style='color:green;'>รับออเดอร์</a>";
+                                     style='background-color: #d0312d;
+                                     color: white;
+                                     padding: 5px;
+                                     text-align: center;
+                                     text-decoration: none;
+                                     display: inline-block;
+                                     border-radius: 10px;'>ยกเลิกออเดอร์</a>";
+                                echo "<a href='changecusshop.php?ID_Order=$row[0]' onclick=\"return confirm('ยืนยันการยอมรับออเดอร์... !!!')\" 
+                                     style='background-color: #006747;
+                                     color: white;
+                                     padding: 5px;
+                                     text-align: center;
+                                     text-decoration: none;
+                                     display: inline-block;
+                                     border-radius: 10px;'>รับออเดอร์</a>";
                             } ?>
                         </td>
                     </tr>
