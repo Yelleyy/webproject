@@ -60,7 +60,7 @@ $i = 1; ?>
         ?>
       </tbody>
     </table>
-    <a href="javascript:history.back()" >กลับหน้าเดิม</a>
+    <a href="javascript:history.back()" style="color:brown;text-decoration:none">กลับหน้าเดิม</a>
   </div>
   <br>
 </body>

@@ -52,7 +52,7 @@ $category = $_GET["category"];
                 </select>
             </div>
             
-            <button type="submit" name="upload">บันทึก</button>
+            <button id="button" type="submit" name="upload">บันทึก</button>
     </form>
 
 </body>
