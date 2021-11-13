@@ -91,7 +91,7 @@ $stmt->execute();
 
 <body>
     <div class="content-grid">
-        <h1 style="font-size: 60px;">Top 3 กาแฟ</h1>
+        <h1 style="font-size: 60px;">Top 3 เครื่องดื่ม</h1>
         <ul class="auto-grid">
             <li class="grid"><img src="img/>" width="100%">
                 <p>ราคา บาท</p><a href="#">
@@ -103,28 +103,6 @@ $stmt->execute();
 
     <div class="content-grid">
         <h1 style="font-size: 60px;">Top 3 ขนม</h1>
-        <ul class="auto-grid">
-            <li class="grid"><img src="img/>" width="100%">
-                <p>ราคา บาท</p><a href="#">
-                    <p>ซื้อ</p>
-            </li></a>
-
-        </ul>
-    </div>
-
-    <div class="content-grid">
-        <h1 style="font-size: 60px;">Top 3 ชา</h1>
-        <ul class="auto-grid">
-            <li class="grid"><img src="img/>" width="100%">
-                <p>ราคา บาท</p><a href="#">
-                    <p>ซื้อ</p>
-            </li></a>
-
-        </ul>
-    </div>
-
-    <div class="content-grid">
-        <h1 style="font-size: 60px;">Top 3 ไอศกรีม</h1>
         <ul class="auto-grid">
             <li class="grid"><img src="img/>" width="100%">
                 <p>ราคา บาท</p><a href="#">
