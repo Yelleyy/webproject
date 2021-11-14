@@ -14,11 +14,6 @@ if (!isset($_SESSION['email'])) {
 include("admintools.php");
 include("connect.php");
 
-$ID_CATF = $_GET["ID_CATF"];
-$CATF_Name = $_GET["CATF_Name"];
-$Pic = $_GET["Pic"];
-$category = $_GET["category"];
-
 
 ?>
 <!DOCTYPE html>
