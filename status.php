@@ -27,6 +27,9 @@ include("tools.php");
         text-decoration: none;
         font-weight: bolder;
     }
+    .center{
+        max-width: 80%;
+    }
 </style>
 <body>
     <br>
@@ -44,7 +47,7 @@ include("tools.php");
         <h1>รายการคำสั่งซื้อ</h1>
 
         <div>
-            <table class="rwd-table" style="min-width: 845px">
+            <table class="rwd-table" >
                 <thead>
                     <tr align='center'>
                         <th>ID-Order</th>
