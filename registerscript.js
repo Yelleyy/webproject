@@ -69,11 +69,13 @@ $('document').ready(function() {
             Pass_User_state = true;
             $('#Pass_User2').parent().removeClass();
             $('#Pass_User2').parent().addClass('form_success');
-            $('#Pass_User2').siblings("span").text("รหัสผ่านตรงกัน").css('color', 'green');
-        } else
+            $('#Pass_User2').siblings("span").text("รหัสผ่านตรงกัน");
+        } else {
+            // // Pass_User_state = false;
             $('#Pass_User2').parent().removeClass();
-        $('#Pass_User2').parent().addClass('form_error');
-        $('#Pass_User2').siblings("span").text("รหัสผ่านไม่ตรงกันน").css('color', 'red');
+            $('#Pass_User2').parent().addClass('form_error');
+            $('#Pass_User2').siblings("span").text("รหัสผ่านไม่ตรงกัน");
+        }
     });
 
     $('#reg_btn').on("click", function(e) {
@@ -81,7 +83,7 @@ $('document').ready(function() {
         var Email_User = $("#Email_User").val();
         var Pass_User = $("#Pass_User").val();
         var Name_User = $("#Name_User").val();
-        if (Tel_User_state == false || Email_User_state == false || Pass_User_state == false) {
+        if (Tel_User_state == false || Email_User_state == false || Pass_User_state == false || (!(Name_User))) {
             e.preventDefault();
             $("#error_msg").text("กรอกข้อมูลให้ครบถ้วน");
         } else {
