@@ -86,6 +86,9 @@ $('document').ready(function() {
     });
 
     $('#Pass_User, #Pass_User2').on('keyup', function() {
+        // if (!($('#Pass_User').val() == '') && !($('#Pass_User').val() == '')) {
+        //     $('#Pass_User2').parent().removeClass();
+
         if ($('#Pass_User').val() == $('#Pass_User2').val()) {
             Pass_User_state = true;
             $('#Pass_User2').parent().removeClass();
@@ -97,6 +100,8 @@ $('document').ready(function() {
             $('#Pass_User2').parent().addClass('form_error');
             $('#Pass_User2').siblings("span").text("รหัสผ่านไม่ตรงกัน");
         }
+
+        // }
     });
 
     $('#reg_btn').on("click", function(e) {
