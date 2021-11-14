@@ -4,11 +4,16 @@ if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['email']);
     header('location: login.php');
-  }
+}
 include "tools.php";
 include "connect.php";
-$stmt = $pdo->prepare("select * from categoryf");
+$stmt = $pdo->prepare("SELECT *,COUNT(detail.ID_Food) as count from detail join stock on detail.ID_Food=stock.ID_Food join categoryf on categoryf.ID_CATF=stock.ID_CATF 
+WHERE categoryf.category='beverage' GROUP BY stock.ID_Food  ORDER BY `count`  DESC ;");
 $stmt->execute();
+$stmt1 = $pdo->prepare("SELECT *,COUNT(detail.ID_Food) as count from detail join stock on detail.ID_Food=stock.ID_Food join categoryf on categoryf.ID_CATF=stock.ID_CATF 
+WHERE categoryf.category='bakery' GROUP BY stock.ID_Food  ORDER BY `count`  DESC ;");
+$stmt1->execute();
+
 
 ?>
 <!DOCTYPE html>
@@ -92,27 +97,37 @@ $stmt->execute();
 <body>
     <div class="content-grid">
         <h1 style="font-size: 60px;">Top 3 เครื่องดื่ม</h1>
-        <ul class="auto-grid">
-            <li class="grid"><img src="img/>" width="100%">
-                <p>ราคา บาท</p><a href="#">
-                    <p>ซื้อ</p>
-            </li></a>
 
+        <ul class="auto-grid">
+            <?php while ($row = $stmt->fetch()) : ?>
+                <li class="grid"><img src="img/<?=$row[10]?>" width="100%">
+                    <p><?=$row[7]?></p>
+                    <p>ราคา <?=$row[9]?> บาท</p>
+                    <p>ยอดขาย <?=$row['count']?> แก้ว</p><a href="cart.php?ID_Product=<?= $row[4] ?>&op=add">
+                        <p>ซื้อ</p>
+                </li></a>
+            <?php endwhile; ?>
         </ul>
+
     </div>
 
     <div class="content-grid">
         <h1 style="font-size: 60px;">Top 3 ขนม</h1>
         <ul class="auto-grid">
-            <li class="grid"><img src="img/>" width="100%">
-                <p>ราคา บาท</p><a href="#">
-                    <p>ซื้อ</p>
-            </li></a>
+        <?php while ($row1 = $stmt1->fetch()) : ?>
+                <li class="grid"><img src="img/<?=$row1[10]?>" width="100%">
+                    <p><?=$row1[7]?></p>
+                    <p>ราคา <?=$row1[9]?> บาท</p>
+                    <p>ยอดขาย <?=$row1['count']?> รายการ</p><a href="cart.php?ID_Product=<?= $row[4] ?>&op=add">
+                        <p>ซื้อ</p>
+                </li></a>
+            <?php endwhile; ?>
 
         </ul>
     </div>
 
-    
+
 </body>
 <?php include("footer.php"); ?>
+
 </html>
