@@ -60,7 +60,7 @@ $stmt2->execute();
                     ?>
                 </select>
             </div>
-            <button type="submit" name="upload">บันทึก</button>
+            <button id="button" type="submit" name="upload">บันทึก</button>
     </form>
 
 </body>
