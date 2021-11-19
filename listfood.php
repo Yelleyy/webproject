@@ -15,7 +15,7 @@ include("admintools.php");
             <?php
             if (isset($_POST['search'])) {
                 $search = $_POST['search'];
-                $stmt = $pdo->prepare("SELECT * FROM stock WHERE Food_Name LIKE '%$search%'");
+                $stmt = $pdo->prepare("SELECT * FROM stock join categoryf on stock.ID_CATF=categoryf.ID_CATF WHERE Food_Name LIKE '%$search%' ORDER BY stock.`ID_Food`");
                 $stmt->execute();
                 $row = $stmt->fetch();
                 if (empty($row)) {
@@ -34,9 +34,9 @@ include("admintools.php");
                         <tr>
                             <td data-th="ไอดี"><?= $row[0] ?></td>
                             <td data-th="ชื่อ"><?= $row[1] ?></td>
-                            <td data-th="ราคา"><?= number_format($row[3], 2) ?></td>
+                            <td data-th="ราคา"><?= number_format($row[2], 2) ?></td>
                             <td data-th="รูป"> <img src='img/<?= $row["PicFood"] ?>' width='100'></td>
-                            <td data-th="หมวดหมู่"><?= $row[7] ?></td>
+                            <td data-th="หมวดหมู่"><?= $row[6] ?></td>
                             <td><a href="listfood_edit.php?ID=<?= $row[0] ?>">แก้ไข</a> <a href="delfood.php?ID=<?= $row[0] ?>" onclick="return confirm('คุณแน่ใจแล้วหรอที่จะลบ !!!')">ลบ</a></td>
                         </tr>
 
@@ -74,9 +74,9 @@ include("admintools.php");
                         <tr>
                             <td data-th="ไอดี"><?= $row[0] ?></td>
                             <td data-th="ชื่อ"><?= $row[1] ?></td>
-                            <td data-th="ราคา"><?= number_format($row[3], 2) ?></td>
+                            <td data-th="ราคา"><?= number_format($row[2], 2) ?></td>
                             <td data-th="รูป"> <img src='img/<?= $row["PicFood"] ?>' width='100'></td>
-                            <td data-th="หมวดหมู่"><?= $row[7] ?></td>
+                            <td data-th="หมวดหมู่"><?= $row[6] ?></td>
                             <td><a href="listfood_edit.php?ID=<?= $row[0] ?>">แก้ไข</a> <a href="delfood.php?ID=<?= $row[0] ?>" onclick="return confirm('คุณแน่ใจแล้วหรอที่จะลบ !!!')">ลบ</a></td>
                         </tr>
                 <?php endwhile;
