@@ -42,7 +42,7 @@ include("admintools.php");
 
                     <?php  }
             } else {
-                $stmt1 = $pdo->prepare("SELECT count(*) as count FROM `stock` join categoryf on stock.ID_CATF=categoryf.ID_CATF ORDER BY stock.`ID_Food` ASC ");
+                $stmt1 = $pdo->prepare("SELECT count(*) FROM `stock` join categoryf on stock.ID_CATF=categoryf.ID_CATF ORDER BY stock.`ID_Food` ASC ");
                 $stmt1->execute();
                 $row1=$stmt1->fetch();
                 $count=ceil($row1[0]/10);

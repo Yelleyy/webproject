@@ -69,9 +69,9 @@ $stmt1->execute();
         <h1>Top 3 เครื่องดื่ม</h1>
         <ul class="auto-grid">
             <?php while ($row = $stmt->fetch()) : ?>
-                <li class="grid"><img src="img/<?=$row[10]?>" width="100%">
+                <li class="grid"><img src="img/<?=$row[9]?>" width="100%">
                     <p><?=$row[7]?></p>
-                    <p>ราคา <?=$row[9]?> บาท</p>
+                    <p>ราคา <?=$row[8]?> บาท</p>
                     <p>ยอดขาย <?=$row['count']?> แก้ว</p><a href="cart.php?ID_Product=<?= $row[4] ?>&op=add">
                         <p>ซื้อ</p>
                 </li></a>
@@ -84,9 +84,9 @@ $stmt1->execute();
         <h1>Top 3 ขนม</h1>
         <ul class="auto-grid">
         <?php while ($row1 = $stmt1->fetch()) : ?>
-                <li class="grid"><img src="img/<?=$row1[10]?>" width="100%">
+                <li class="grid"><img src="img/<?=$row1[9]?>" width="100%">
                     <p><?=$row1[7]?></p>
-                    <p>ราคา <?=$row1[9]?> บาท</p>
+                    <p>ราคา <?=$row1[8]?> บาท</p>
                     <p>ยอดขาย <?=$row1['count']?> รายการ</p><a href="cart.php?ID_Product=<?= $row1[4] ?>&op=add">
                         <p>ซื้อ</p>
                 </li></a>
