@@ -3,8 +3,6 @@
 session_start();
 include('connect.php');
 
-
-$amount =  $_POST['amount'];
 $price =  $_POST['price'];
 $ID_CATF =  $_POST['catf'];
 
@@ -20,8 +18,8 @@ if ($upload <> '') {
 	move_uploaded_file($_FILES['pic']['tmp_name'], $path_copy);
 }
 
-$stmt1 = $pdo->prepare("INSERT INTO stock (Food_Name,amount,price,PicFood,ID_CATF)
-VALUES ('$name','$amount','$price','$newname','$ID_CATF')");
+$stmt1 = $pdo->prepare("INSERT INTO stock (Food_Name,price,PicFood,ID_CATF)
+VALUES ('$name','$price','$newname','$ID_CATF')");
 echo $name.$newname.$category;
 $stmt1->execute();
 

@@ -99,7 +99,7 @@ include("tools.php");
                 ?>
             </table>
         </div>
-        <a type="submit" href="javascript:history.back()" 
+        <a type="submit" href="index.php" 
         style="color:brown">กลับหน้าแรก</a>
     </div>
 </body>

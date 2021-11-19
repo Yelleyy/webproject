@@ -18,7 +18,7 @@ include("tools.php");
 <html>
 
 <head>
-
+    <link rel="stylesheet" href="./table.css">
 </head>
 
 <body>
@@ -32,44 +32,35 @@ include("tools.php");
     $stmt = $pdo->prepare("SELECT * from address where ID_User='$idd'");
     $stmt->execute();
     ?>
-    <div class="container">
-        <br>
-        <div class="row">
-            <div class="col-10">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">ที่อยู่จัดส่ง</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table id="example" class="display" style="min-width: 845px">
-                                <thead>
-                                    <tr align='center'>
-                                        <th>ID-Address</th>
-                                        <th>ที่อยู่</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    while ($row =  $stmt->fetch()) {
-                                        echo "<tr align='center'>";
-                                        echo "<td >" . $row["ID_Address"] . "</td>";
-                                        echo "<td>" . $row["Address"] . "</td>";
-                                        echo "<td><a href='deladdress.php?ID=$row[0]' onclick=\"return confirm('คุณแน่ใจแล้วหรอที่จะลบ !!!')\" class='btn btn-outline-danger'>ลบ</a></td>";
-                                        echo "</tr>";
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+    <br>
+    <br>
+    <div class="center">
+        <h4>ที่อยู่จัดส่ง</h4>
 
-                </div>
-            </div>
+        <div class="rwd-table">
+            <table id="example" class="display" style="min-width: 845px">
+                <thead>
+                    <tr align='center'>
+                        <th>ID-Address</th>
+                        <th>ที่อยู่</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    while ($row =  $stmt->fetch()) {
+                        echo "<tr align='center'>";
+                        echo "<td >" . $row["ID_Address"] . "</td>";
+                        echo "<td>" . $row["Address"] . "</td>";
+                        echo "<td><a href='deladdress.php?ID=$row[0]' onclick=\"return confirm('คุณแน่ใจแล้วหรอที่จะลบ !!!')\" id='button'>ลบ</a></td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
         </div>
-        <a type="submit" href="confirm.php" name="button" id="button" class='btn btn-success' />ยืนยัน</a>
-        <a type="submit" href="address_add.php" class='btn btn-primary' />เพิ่มที่อยู่</a>
+    <a type="submit" href="confirm.php" name="button" id="button" >ยืนยัน</a>
+    <a type="submit" href="address_add.php" id="button"ค >เพิ่มที่อยู่</a>
     </div>
 
 </body>
