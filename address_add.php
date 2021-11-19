@@ -69,11 +69,24 @@ include("tools.php");
 		box-shadow: none;
 	}
 </style>
+<script>
+    function check() {
+        let detail = document.forms["form"]["detail"].value;
+        let district = document.forms["form"]["district"].value;
+        let amphoe = document.forms["form"]["amphoe"].value;
+        let province = document.forms["form"]["province"].value;
+        let zipcode = document.forms["form"]["zipcode"].value;
 
+        if (zipcode == "" || detail=="" || district==""|| amphoe==""|| province=="") {
+            alert("กรุณากรอกให้ครบ");
+            return false;
+        }
+    }
+</script>
 <body>
 	<br><br><br>
 
-	<form action="address_adddb.php" method="post">
+	<form action="address_adddb.php" method="post" name="form" onsubmit="return check()">
 		<div class="container center">
 			<h2>ฟอร์มเพิ่มที่อยู่</h2>
 			<div class="form-control">

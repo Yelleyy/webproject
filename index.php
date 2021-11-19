@@ -15,7 +15,6 @@ $stmt1 = $pdo->prepare("SELECT *,COUNT(detail.ID_Food) as count from detail join
 WHERE categoryf.category='bakery' GROUP BY stock.ID_Food  ORDER BY `count`  DESC LIMIT 3;");
 $stmt1->execute();
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

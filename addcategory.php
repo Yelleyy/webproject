@@ -27,6 +27,18 @@ $category = $_GET["category"];
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    function check() {
+        let name = document.forms["form"]["name"].value;
+        let category = document.forms["form"]["category"].value;
+        let pic = document.forms["form"]["pic"].value;
+        if (name == "" || category=="" || pic=="") {
+            alert("กรุณากรอกให้ครบ");
+            return false;
+        }
+    }
+</script>
+
 <style>
     div{
         line-height: 40px;
@@ -34,7 +46,7 @@ $category = $_GET["category"];
 </style>
 <body>
     <br><br><br><br>
-    <form action='addcategory_db.php' method="post" enctype="multipart/form-data">
+    <form action='addcategory_db.php' method="post" enctype="multipart/form-data" name="form" onsubmit="return check()">
         <div class="center" style="font-size: 1.5rem;">
             <div>
                 <label>ชื่อ</label>
