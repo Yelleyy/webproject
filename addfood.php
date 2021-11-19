@@ -38,10 +38,6 @@ $stmt2->execute();
                 <input type="text" name="name">
             </div>
             <div>
-                <label>จำนวน</label>
-                <input type="text" name="amount">
-            </div>
-            <div>
                 <label>ราคา</label>
                 <input type="text" name="price">
             </div>

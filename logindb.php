@@ -18,6 +18,7 @@
                 }
                 else if($row["Level"]=="member"){
                     header("location: index.php");
+                    setcookie("login","yes",time()+3600*24);
                 }
                 
             } 
