@@ -1,5 +1,6 @@
 <?php
     session_start();
+    setcookie("login","yes");
 ?>
 <!DOCTYPE html>
 <html lang="en">

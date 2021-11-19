@@ -8,11 +8,26 @@ if (isset($_GET['logout'])) {
     header('location: login.php');
 }
 $ID_CATF = $_REQUEST["ID_CATF"];
-$stmt = $pdo->prepare("select * from stock where ID_CATF=$ID_CATF");
+$page=$_GET["page"];
+if(!isset($_GET["page"])){
+    $page=0;
+}
+else{
+    $page=$_GET["page"];
+}
+$stmt = $pdo->prepare("select * from stock where ID_CATF=$ID_CATF limit 4 offset $page");
 $stmt->execute();
+
 $stmt1 = $pdo->prepare("select * from categoryf where ID_CATF=$ID_CATF");
 $stmt1->execute();
 
+$stmt2 = $pdo->prepare("select COUNT(*) from stock where ID_CATF=$ID_CATF");
+$stmt2->execute();
+$row2=$stmt2->fetch();
+$count=ceil($row2[0]/4);
+for ($i=0; $i <$count ; $i++) { 
+    echo "<br><div class='center'><a class='center' href='buyfood.php?ID_CATF=".$ID_CATF."&page=".($i*4)."' style='border: 3px solid black;' >หน้าที่ ".($i+1)." "."</a></div>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,8 +47,8 @@ $stmt1->execute();
         <ul class="auto-grid">
 
             <?php while ($row = $stmt->fetch()) : ?>
-                <li class="grid"><img src="img/<?= $row[4]; ?>" width="100%"><?= $row[1]; ?>
-                    <p>ราคา <?= $row[3]; ?> บาท</p><a href="cart.php?ID_Product=<?= $row[0] ?>&op=add">
+                <li class="grid"><img src="img/<?= $row[3]; ?>" width="100%"><?= $row[1]; ?>
+                    <p>ราคา <?= $row[2]; ?> บาท</p><a href="cart.php?ID_Product=<?= $row[0] ?>&op=add">
                         <p>ซื้อ</p>
                 </li></a>
             <?php endwhile; ?>
