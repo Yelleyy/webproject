@@ -38,7 +38,7 @@ include "connect.php";
                     <a class="right" href="status.php">ตรวจสอบสถานะ</a>
                 </li>
                 <li class="right">
-                    <a class="right" href="cart.php"><img src="./img/shopping-cart.png" width="18px" style="color: rgb(162, 104, 238);"></a>
+                    <a class="right" href="cart.php"><img src="./img/shopping-cart.png" width="18px" height="18px" style="color: rgb(162, 104, 238);"></a>
                 </li>
                 <li class="right">
                     <a style="font-weight: bold;">

@@ -27,7 +27,7 @@ $stmt->execute();
         <ul class="auto-grid">
             <?php while ($row = $stmt->fetch()) : ?>
                 <a href="buyfood.php?ID_CATF=<?= $row[0] ?>"> 
-                <li class="grid"><img src="img/<?= $row[2]; ?>" width="100%"><?= $row[1]; ?>
+                <li class="grid"><img src="img/<?= $row[2]; ?>"  class="food"  width="100%"><?= $row[1]; ?>
                 </li></a>
             <?php endwhile; ?>
         </ul>
