@@ -19,6 +19,17 @@ $stmt2->execute();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<script>
+    function check() {
+        let name = document.forms["form"]["name"].value;
+        let price = document.forms["form"]["price"].value;
+        let pic = document.forms["form"]["pic"].value;
+        if (name == "" || price=="" || pic=="") {
+            alert("กรุณากรอกให้ครบ");
+            return false;
+        }
+    }
+</script>
 
 <head>
     <link rel="stylesheet" href="style.css">
@@ -31,7 +42,7 @@ $stmt2->execute();
 
 <body>
     <br><br><br><br>
-    <form action='addfood_db.php' method="post" enctype="multipart/form-data">
+    <form action='addfood_db.php' method="post" enctype="multipart/form-data" name="form"  onsubmit="return check()">
         <div class="center" style="font-size: 1.5rem;">
             <div>
                 <label>ชื่อ</label>
@@ -56,7 +67,7 @@ $stmt2->execute();
                     ?>
                 </select>
             </div>
-            <button id="button" type="submit" name="upload">บันทึก</button>
+            <button id="button" type="submit" name="upload" >บันทึก</button>
     </form>
 
 </body>
