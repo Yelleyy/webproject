@@ -21,13 +21,13 @@
 		<input type="text" name="Name_User" placeholder="ชื่อ-สกุล" id="Name_User" >
         </div>
 
-        <div>
-            <input type="email" name="Email_User" placeholder="อีเมล" id="Email_User" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
-            <span></span>
-        </div>     
+		<div >
+			<input type="email" name="Email_User" placeholder="อีเมล" id="Email_User"  >
+			<span></span>
+		</div>
 
         <div>
-            <input type="tel" name="Tel_User" placeholder="เบอร์โทร" id="Tel_User"  pattern="0[1-9]{9}" >
+            <input type="tel" name="Tel_User" placeholder="เบอร์โทร" id="Tel_User" >
 			<span></span>
         </div>
 		
@@ -50,5 +50,9 @@
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="registerscript.js"></script>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  
 </body>
 </html>
