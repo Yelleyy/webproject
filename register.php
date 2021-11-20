@@ -18,29 +18,29 @@
 	<form id="register_form">
 		<h1>สมัครเข้าใช้งาน</h1>
 		<div id="error_msg"></div>
-		<input type="text" name="Name_User" placeholder="ชื่อ-สกุล" id="Name_User" required>
+		<input type="text" name="Name_User" placeholder="ชื่อ-สกุล" id="Name_User" >
         </div>
 
-        <div>
-            <input type="email" name="Email_User" placeholder="อีเมล" id="Email_User" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
-            <span></span>
-        </div>     
+		<div >
+			<input type="email" name="Email_User" placeholder="อีเมล" id="Email_User"  >
+			<span></span>
+		</div>
 
         <div>
-            <input type="tel" name="Tel_User" placeholder="เบอร์โทร" id="Tel_User"  pattern="0[1-9]{9}" required>
+            <input type="tel" name="Tel_User" placeholder="เบอร์โทร" id="Tel_User" >
 			<span></span>
         </div>
 		
 		<div>
-			<input type="password" name="Pass_User" placeholder="รหัสผ่าน" id="Pass_User" required>
+			<input type="password" name="Pass_User" placeholder="รหัสผ่าน" id="Pass_User" >
 		</div>
 
 		<div>
-			<input type="password" name="Pass_User2" placeholder="ยืนยันรหัสผ่าน" id="Pass_User2" required>
+			<input type="password" name="Pass_User2" placeholder="ยืนยันรหัสผ่าน" id="Pass_User2" >
 			<span></span>
 		</div>
 		<div>
-			<button tyoe="button" name="register" id="reg_btn">สมัครเพื่อเข้าใช้งาน</button>
+			<button type="submit" name="register" id="reg_btn">สมัครเพื่อเข้าใช้งาน</button>
 		</div>
 		<div class="createaccount">          
 			<p>มีบัญชีแล้วใช่ไหม <a href="login.php">เข้าสู่ระบบ</a></p>
@@ -50,5 +50,9 @@
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="registerscript.js"></script>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  
 </body>
 </html>
