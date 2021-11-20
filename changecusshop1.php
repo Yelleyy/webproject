@@ -8,7 +8,7 @@ $stmt->execute();
 if ($stmt) {
     echo "<script type='text/javascript'>";
     echo "alert('ยกเลิกออเดอร์เสร็จสิ้น');";
-    echo "window.location = 'shop_order.php'; ";
+    echo "window.location = 'listorder.php'; ";
     echo "</script>";
 } else {
     echo "<script type='text/javascript'>";

@@ -93,7 +93,7 @@
         }
         /* media Queries */
         
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 1400px) {
             ul.links li:not(:first-child) {
                 display: none;
             }
@@ -104,7 +104,7 @@
         }
         /* new class responsive */
         
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 1400px) {
             ul.links.responsive {
                 position: relative;
             }
