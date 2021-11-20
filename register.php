@@ -22,7 +22,7 @@
         </div>
 
 		<div >
-			<input type="email" name="Email_User" placeholder="อีเมล" id="Email_User"  >
+			<input type="email" name="Email_User" placeholder="example@example.com" id="Email_User"  >
 			<span></span>
 		</div>
 
