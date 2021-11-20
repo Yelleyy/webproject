@@ -11,8 +11,8 @@ include "connect.php";
 $stmt = $pdo->prepare("SELECT *,COUNT(detail.ID_Food) as count from detail join stock on detail.ID_Food=stock.ID_Food join categoryf on categoryf.ID_CATF=stock.ID_CATF 
 WHERE categoryf.category='beverage' GROUP BY stock.ID_Food  ORDER BY `count`  DESC LIMIT 3;");
 $stmt->execute();
-$stmt1 = $pdo->prepare("SELECT *,COUNT(detail.ID_Food) as count from detail join stock on detail.ID_Food=stock.ID_Food join categoryf on categoryf.ID_CATF=stock.ID_CATF 
-WHERE categoryf.category='bakery' GROUP BY stock.ID_Food  ORDER BY `count`  DESC LIMIT 3;");
+$stmt1 = $pdo->prepare("SELECT *,COUNT(detail.ID_Food) as count from detail join stock on detail.ID_Food=stock.ID_Food join categoryf on 
+categoryf.ID_CATF=stock.ID_CATF WHERE categoryf.category='bakery' GROUP BY stock.ID_Food  ORDER BY `count`  DESC LIMIT 3;");
 $stmt1->execute();
 
 ?>
